@@ -1,0 +1,52 @@
+title = "Generic Node"
+
+baseURL = "http://localhost/"
+
+disableKinds = [
+  "taxonomy",
+  "taxonomyTerm",
+  "RSS",
+  "sitemap",
+]
+
+enableGitInfo = true
+
+languageCode = "en-us"
+languageName = "English"
+
+theme = "generic-node"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "LoRaWAN Generic Node"
+  keywords = []
+  github_repository = "https://github.com/TheThingsIndustries/generic-node-se"
+  github_repository_edit = "https://github.com/TheThingsIndustries/generic-node-se"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.contributing]]
+    name = "GitHub"
+    url = "https://github.com/TheThingsIndustries/generic-node-se"
+    weight = 1
+
+  [[menu.contributing]]
+    name = "Forum"
+    url = "https://github.com/TheThingsIndustries/generic-node-se"
+    weight = 2
+
+  [[menu.about_us]]
+    name = "The Things Network"
+    url = "https://www.thethingsnetwork.org"
+    weight = 1
+
+  [[menu.about_us]]
+    name = "The Things Industries"
+    url = "https://www.thethingsindustries.com"
+    weight = 2
