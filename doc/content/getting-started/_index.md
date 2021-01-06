@@ -5,6 +5,5 @@ weight: -2
 menu:
   main:
     weight: 1
-aliases: [/guides/getting-started, /guides/getting-started/running-the-stack]
+aliases: [/guides/getting-started]
 ---
-{{< note "This is a place holder" />}}

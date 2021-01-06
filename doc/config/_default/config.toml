@@ -38,7 +38,7 @@ pygmentsUseClasses = true
 
   [[menu.contributing]]
     name = "Forum"
-    url = "https://github.com/TheThingsIndustries/generic-node-se"
+    url = "https://www.thethingsnetwork.org/forum/c/nodes/generic-node"
     weight = 2
 
   [[menu.about_us]]
