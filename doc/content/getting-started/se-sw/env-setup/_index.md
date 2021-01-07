@@ -1,10 +1,8 @@
 ---
-title: "Environment setup"
+title: "Environment Setup"
 description: ""
 weight: -1
 distributions: null
 ---
-Developers have different preferences and various backgrounds.
-For this reason, we provide multiple environment setup options.
 
-Feel free to follow the setup guide that suits your development style.
+Since developers have various backgrounds, we provide multiple environment setup guides, so you can follow the one that fits your preference.

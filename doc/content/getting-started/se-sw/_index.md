@@ -5,27 +5,21 @@ weight: 1
 distributions: null
 ---
 
-Get started by installing all the needed tools and setup your environment to get going with building applications.
+Get started by installing all the tools needed and setting up your environment to proceed with building the applications.
 
 <!--more-->
 
-## Explore
+## Working with the Generic Node Sensor Edition Repository
 
-It is good idea to get familiar with of the available source code and applications that are compatible with your board.
-You can explore the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">  {{% gnse %}} Github repository</a> to get familiar with the structure.
+It is always a good idea to get familiar with of the available source code and the applications that are compatible with your board. Check out the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">{{% gnse %}} on Github</a> to get familiar with the repository structure.
 
-## Get your copy
+Next, clone the repository to get its local copy on your machine by running the following command:
 
-Once you are done, it is a good idea to get a local copy of the repo on your machine.
-
-Run this command
-```
+```bash
 $ git clone --branch develop \
 --recurse-submodules \
 https://github.com/TheThingsIndustries/generic-node-se.git
 ```
-Or you can follow this
- <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository" target="_blank"> Github Guide </a> if you are not familiar with git.
+If you are not too familiar with Git, visit the official GitHub documentation to <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository" target="_blank">learn to clone a repository</a>.
 
-## Setup your environment
-If you are planning to develop applications and/or contribute to the source code, you can setup your environment by following the guide that best suits your development style.
+If you are planning to develop custom applications and/or contribute to the source code, see the [Environment setup]({{< ref "/getting-started/se-sw/env-setup" >}}) guide.

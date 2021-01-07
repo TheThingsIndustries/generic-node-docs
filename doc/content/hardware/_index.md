@@ -7,4 +7,4 @@ menu:
     weight: 2
 distributions: null
 ---
-{{< note "This is a place holder" />}}
+{{< note "Place holder, and more documentation coming soon" />}}

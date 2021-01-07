@@ -5,14 +5,13 @@ weight: -1
 distributions: null
 ---
 
-Weather you are a beginner or an experienced developer, we believe it should be fairly simple to explore and develop for any {{% gn %}} device.
+{{% gn %}} device should be fairly simple, because we believe that the LoRaWAN device development needs to be easy and straightforward.
 
 <!--more-->
-We believe LoRaWAN device development should be easy and straight forward.
 
 ## Choosing a device
 
-To get started with the {{% gn %}} platform, you typically would need two things:
+To get started with the {{% gn %}} platform, you would typically need two things:
 
 1. {{% gn %}} supported hardware
 2. {{% gn %}} supported software
@@ -24,12 +23,14 @@ For example, if you are planning to use the {{% gnse %}}, you would need:
 
 ## Setting up your node
 
+To learn to setup your {{% gnse %}}, follow these sections:
+
 - [Sensor Edition Hardware Setup Guide]({{< ref "/getting-started/se-hw" >}})
 - [Sensor Edition Software Setup Guide]({{< ref "/getting-started/se-sw" >}})
 
 ## Exploring the node features
 
-If you want to learn more about your node, head over to
+If you want to learn more about your node, take a look at the following sections:
 
 - [Hardware]({{< ref "/hardware" >}})
 - [Software]({{< ref "/software" >}})

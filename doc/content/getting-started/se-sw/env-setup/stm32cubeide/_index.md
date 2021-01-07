@@ -1,7 +1,7 @@
 ---
-title: "STM32CubeIDE (eclipse)"
+title: "STM32CubeIDE (Eclipse)"
 description: ""
 weight: 3
 distributions: null
 ---
-{{< note "This is a place holder" />}}
+{{< note "Place holder, and more documentation coming soon" />}}

@@ -21,7 +21,7 @@ DOC_ROOT = doc
 PUBLIC_DEST = ../public # Relative to DOC_ROOT
 INTERNAL_DEST = ../internal # Relative to DOC_ROOT
 ENVIRONMENT ?= gh-pages
-HUGO_BASE_URL ?= https://www.genericnode.com/docs
+HUGO_BASE_URL ?= https://thethingsindustries.github.io/generic-node-docs/
 
 .PHONY: default
 default: server
