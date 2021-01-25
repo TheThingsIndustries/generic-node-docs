@@ -11,7 +11,7 @@ Setup the environment and build an application using a Docker image.
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/)
+1. [Docker](https://docs.docker.com/get-docker/)
 
 ## Setup
 
@@ -36,7 +36,7 @@ If the image build was successful, you should be able to use the image as your b
 
 ## Build Example
 
-You can attach and bind your project folder to your new image
+You can attach and bind your project folder to your new image:
 
 ```bash
 $ cd generic-node-se\
@@ -47,7 +47,8 @@ $ docker run \
 gnse_img
 ```
 
-Now you should be able to build your application in the attached container
+Now you should be able to build your application in the attached container:
+
 ```bash
 $ mkdir -p build/debug
 $ cd build/debug
