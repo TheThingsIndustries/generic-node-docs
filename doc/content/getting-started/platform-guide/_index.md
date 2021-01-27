@@ -5,7 +5,7 @@ weight: -1
 distributions: null
 ---
 
-{{% gn %}} device should be fairly simple, because we believe that the LoRaWAN device development needs to be easy and straightforward.
+The {{% gn %}} platform is designed to provide an easy way to get started with device development.
 
 <!--more-->
 

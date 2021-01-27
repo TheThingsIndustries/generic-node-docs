@@ -1,7 +1,7 @@
 ---
 title: "SENSOR EDITION SOFTWARE SETUP"
 description: ""
-weight: 1
+weight: 2
 distributions: null
 ---
 
@@ -11,7 +11,7 @@ Get started by installing all the tools needed and setting up your environment t
 
 ## Working with the Generic Node Sensor Edition Repository
 
-It is always a good idea to get familiar with of the available source code and the applications that are compatible with your board. Check out the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">{{% gnse %}} on Github</a> to get familiar with the repository structure.
+It is always a good idea to get familiar with the available source code and the applications that are compatible with your board. Check out the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">{{% gnse %}} on Github</a> to get familiar with the repository structure.
 
 Next, clone the repository to get its local copy on your machine by running the following command:
 
