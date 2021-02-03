@@ -76,10 +76,10 @@
   <a href="https://thethingsindustries.github.io/generic-node-docs/getting-started/se-sw/env-setup/docker/" class="is-active">Docker</a>
 </li>
 <li>
-  <a href="https://thethingsindustries.github.io/generic-node-docs/getting-started/se-sw/env-setup/vscode/" class="">Visual Studio Code</a>
+  <a href="https://thethingsindustries.github.io/generic-node-docs/getting-started/se-sw/env-setup/stm32cubeide/" class="">STM32CubeIDE (Eclipse)</a>
 </li>
 <li>
-  <a href="https://thethingsindustries.github.io/generic-node-docs/getting-started/se-sw/env-setup/stm32cubeide/" class="">STM32CubeIDE (Eclipse)</a>
+  <a href="https://thethingsindustries.github.io/generic-node-docs/getting-started/se-sw/env-setup/vscode/" class="">Visual Studio Code</a>
 </li>
 </ul>
 
@@ -101,9 +101,9 @@
 
 <p>Setup the environment and build an application using a Docker image.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<ul>
+<ol>
 <li><a href="https://docs.docker.com/get-docker/">Docker</a></li>
-</ul>
+</ol>
 <h2 id="setup">Setup</h2>
 <ol>
 <li>Clone project &amp; checkout <code>develop</code> branch:</li>
@@ -121,14 +121,14 @@ $ docker build -t gnse_img ./Software
 </ol>
 <p><code>set(TOOLCHAIN_PREFIX &quot;/toolchain/gcc-arm-none-eabi-9-2020-q2-update/&quot;)</code></p>
 <h2 id="build-example">Build Example</h2>
-<p>You can attach and bind your project folder to your new image</p>
+<p>You can attach and bind your project folder to your new image:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> generic-node-se<span class="se">\
 </span><span class="se"></span>$ docker run <span class="se">\
 </span><span class="se"></span>-it <span class="se">\
 </span><span class="se"></span>--name gnse <span class="se">\
 </span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&#34;</span>/Software,target<span class="o">=</span>/gnse <span class="se">\
 </span><span class="se"></span>gnse_img
-</code></pre></div><p>Now you should be able to build your application in the attached container</p>
+</code></pre></div><p>Now you should be able to build your application in the attached container:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir -p build/debug
 $ <span class="nb">cd</span> build/debug
 $ cmake -G ninja ../.. -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>../../cross.cmake -DTARGET_APP<span class="o">=</span>basic
@@ -148,7 +148,7 @@ $ ninja -v
 
 <div class="is-clearfix">
 <a class="button is-pulled-left" href="/generic-node-docs/getting-started/se-sw/env-setup/cmd/">← Command-line</a>
-<a class="button is-pulled-right" href="/generic-node-docs/getting-started/se-sw/env-setup/vscode/">Visual Studio Code →</a>
+<a class="button is-pulled-right" href="/generic-node-docs/getting-started/se-sw/env-setup/stm32cubeide/">STM32CubeIDE (Eclipse) →</a>
 </div>
 
 
@@ -187,10 +187,10 @@ $ ninja -v
         <h3 class="title is-6">About this page</h3>
         <div class="content">
 <p class="is-size-7">
-  Last changed by Ahmed Mohamed Elsalahy on 07 Jan 2021.
+  Last changed by Nejra on 25 Jan 2021.
   <br>
-  <a href="https://github.com/TheThingsIndustries/generic-node-se/commit/5fe7b59f82154ce0070fa22b930a5c2efb5d947b">
-      doc: Improve guides flow and writeup
+  <a href="https://github.com/TheThingsIndustries/generic-node-se/commit/1b4d4012fdd01214744c8ffd5dbaba0240597586">
+      doc: Improve readability
     </a>
 </p>
 
