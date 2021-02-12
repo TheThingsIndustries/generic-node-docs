@@ -52,7 +52,7 @@ Now you should be able to build your application in the attached container:
 ```bash
 $ mkdir -p build/debug
 $ cd build/debug
-$ cmake -G ninja ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cross.cmake -DTARGET_APP=basic
+$ cmake -G Ninja ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cross.cmake -DTARGET_APP=basic
 $ ninja -v
 ```
 
