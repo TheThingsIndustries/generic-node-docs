@@ -58,7 +58,7 @@ $ make
 Or with Ninja:
 
 ```bash
-$ cmake -G ninja ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cross.cmake -DTARGET_APP=basic
+$ cmake -G Ninja ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cross.cmake -DTARGET_APP=basic
 $ ninja -v
 ```
 
