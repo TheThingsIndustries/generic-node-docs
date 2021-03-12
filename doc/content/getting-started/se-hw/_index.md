@@ -1,5 +1,5 @@
 ---
-title: "SENSOR EDITION HARDWARE SETUP"
+title: "Sensor Edition Hardware Setup"
 description: ""
 weight: 1
 distributions: null
@@ -25,6 +25,6 @@ If you are not too familiar with Git, visit the official GitHub documentation to
 
 ## Becoming familiar with the Generic Node Sensor Edition Board
 
-It is a good idea to become familiar with the {{% gnse %}} on-board components and peripherals, see the [Sensor Edition Board]({{< ref "/hardware/se-board" >}}) guide.
+It is a good idea to become familiar with the {{% gnse %}} on-board components and peripherals, see the [Sensor Edition Board]({{< ref "/sensor-edition/hardware/se-board" >}}) guide.
 
 Next, follow the [Sensor Edition Hardware Design Tools]({{< ref "/getting-started/se-hw/se-hw-design" >}}) section to setup the hardware design tools in order to further explore the schematics and PCB layouts

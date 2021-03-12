@@ -1,5 +1,5 @@
 ---
-title: "SENSOR EDITION SOFTWARE SETUP"
+title: "Sensor Edition Software Setup"
 description: ""
 weight: 2
 distributions: null

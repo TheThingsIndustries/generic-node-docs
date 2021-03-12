@@ -1,5 +1,5 @@
 ---
-title: "WELCOME, WE ARE EXCITED!"
+title: "Welcome, we are excited to have you onboard!"
 description: ""
 weight: -1
 distributions: null
@@ -12,27 +12,27 @@ We are extremely excited to have you as part of the community.
 
 The {{% gnse %}} is a unique device for multiple reasons:
 - It is a functional device that can be used for many LoRaWAN applications
-- It is a production ready device that incorporates ST new STM32WL SOC
+- It is a production-ready device that incorporates STMicroelectronics' new STM32WL SOC
 - It is a reference design hardware
 - It has a source available firmware
 
-## A developers Beta rollout
+## Developer's Beta Rollout
 
 The {{% gnse %}} is currently in Beta phase.
 
 This means a number of things:
 1. You are one of the few people who can actually experience the device hardware and firmware
-2. You can actually contribute to the development of the device
+2. You can contribute to the development of the device
 
 So, as part of this Beta phase we expect you to:
 - Be able to flash, debug and interact with the device
 - Be able to connect external serial loggers, debuggers and sensors
 - Contribute to the development of the device by raising issues
-- Develope and tryout different applications
+- Develop and try different applications
 
 And you can expect us to:
 - Prioritize any issue that you face
-- Your feedback will be analyzed and deeply considered
+- Analyze and incorporate your feedback
 
 ## Where to start?
 

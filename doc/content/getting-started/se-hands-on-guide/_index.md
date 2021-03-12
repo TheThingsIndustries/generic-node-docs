@@ -1,17 +1,17 @@
 ---
-title: "SENSOR EDITION HANDS ON TUTORIALS"
+title: "Sensor Edition Tutorials"
 description: ""
 weight: 3
 distributions: null
 ---
 
-A guide for {{% gnse %}} hands-on videos and tutorials.
+This guide contains hands-on videos and tutorials for working with {{% gnse %}}.
 
 <!--more-->
 
 ## Introduction to {{% gnse %}}
 
-The video below is the official announcement of {{% gnse %}} at The Things Conference.
+The video below shows the official announcement of {{% gnse %}} at The Things Conference 2021.
 
 It provides an overview of the device features and possible use cases.
 

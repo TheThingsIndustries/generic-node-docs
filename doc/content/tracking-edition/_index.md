@@ -7,4 +7,4 @@ menu:
     weight: 6
 distributions: null
 ---
-{{< note "Place holder, and more documentation coming soon" />}}
+{{< note "Stay tuned, more documentation coming soon" />}}
