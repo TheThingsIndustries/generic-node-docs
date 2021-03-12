@@ -13,17 +13,6 @@
 // limitations under the License.
 
 document.addEventListener('DOMContentLoaded', function () {
-  var migrationInfoAccepted = window.localStorage.getItem('migrationInfoAccepted')
-  if(migrationInfoAccepted != 'true') {
-    var migrationBar = document.getElementById('migration-info')
-    migrationBar.style.display = 'flex';
-    var migrationButton = document.getElementById('migration-button')
-    migrationButton.addEventListener('click', function (){
-      window.localStorage.setItem('migrationInfoAccepted', true)
-      migrationBar.style.display = 'none';
-    })
-  }
-
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
   if ($navbarBurgers.length > 0) {
     $navbarBurgers.forEach(function(el) {
