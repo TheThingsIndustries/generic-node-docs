@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="generator" content="Hugo 0.70.0" />
-  <title>Tracking Edition | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/tracking-edition/" />
+  <title>STM32CubeIDE | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/" />
   <link rel="alternate icon" href="/docs/favicon.ico">
   <link rel="alternate icon" type="image/png" href="/docs/favicon.png">
   <link rel="icon" type="image/png" href="/docs/favicon.png">
   <link rel="stylesheet" href="https://www.genericnode.com/docs/css/theme.min.3f836fedc9c6a2b86da58d8c83e93a00336ad147490c56a3e1c424807e9787c1.css" integrity="sha256-P4Nv7cnGorhtpY2Mg&#43;k6ADNq0UdJDFaj4cQkgH6Xh8E=" crossorigin="anonymous">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta itemprop="name" content="Tracking Edition">
+  <meta itemprop="name" content="STM32CubeIDE">
   <meta itemprop="description" content="">
   <meta itemprop="keywords" content="">
-  <meta property="og:title" content="Tracking Edition">
+  <meta property="og:title" content="STM32CubeIDE">
   <meta property="og:description" content="">
-  <meta property="og:url" content="https://www.genericnode.com/docs/tracking-edition/">
-  <meta name="twitter:title" content="Tracking Edition" />
+  <meta property="og:url" content="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/">
+  <meta name="twitter:title" content="STM32CubeIDE" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary" />
 </head>
@@ -46,7 +46,7 @@
         <a class="navbar-item" href="/docs/getting-started/">Getting Started</a>
         <a class="navbar-item" href="/docs/applications/">Applications</a>
         <a class="navbar-item" href="/docs/sensor-edition/">Sensor Edition</a>
-        <a class="navbar-item is-active" href="/docs/tracking-edition/">Tracking Edition</a>
+        <a class="navbar-item" href="/docs/tracking-edition/">Tracking Edition</a>
       </div>
       <div class="navbar-end">
       </div>
@@ -60,9 +60,33 @@
   <div class="container">
     <div class="columns">
       
-      <div class="column">
+      <div class="column is-one-third">
 
-<h1 class="title is-size-2">Tracking Edition
+
+<h2 class="title is-size-4">ST-LINK Programming Methods</h2>
+
+<ul class="menu-list">
+<a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/" class="">Overview</a>
+<li>
+  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/" class="">STM32CubeProgrammer</a>
+</li>
+<li>
+  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/" class="is-active">STM32CubeIDE</a>
+</li>
+<li>
+  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/mounting/" class="">USB Mounting (Drag-and-Drop)</a>
+</li>
+</ul>
+
+
+
+
+
+      </div>
+      
+      <div class="column is-two-thirds">
+
+<h1 class="title is-size-2">STM32CubeIDE
 
 
 </h1>
@@ -70,11 +94,15 @@
 <div class="content">
 
 
-<div class="notification is-info is-light has-text-dark">
-  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
-  Stay tuned, more documentation coming soon
-</div>
-
+<p>If you are using <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> as your build environment, then using the same tool to program your Generic Node Sensor Edition is convenient.</p>
+<h2 id="steps-to-reproduce">Steps to reproduce</h2>
+<ol>
+<li>To program and run or debug Generic Node Sensor Edition, right-click on it and select <em><strong>Run As</strong></em> or <em><strong>Debug As</strong></em>. When programming, make sure you select <strong>STM32 Cortex-M C/C++ Application</strong> in the <strong>Run As</strong> or <strong>Debug As</strong> section.</li>
+</ol>
+<figure>
+    <img src="cubeide.png"
+         alt="cubeide run as"/> 
+</figure>
 </div>
 
 
@@ -83,6 +111,8 @@
 
 
 <div class="is-clearfix">
+<a class="button is-pulled-left" href="/docs/getting-started/programming-software/st-examples/stcubeprog/">← STM32CubeProgrammer</a>
+<a class="button is-pulled-right" href="/docs/getting-started/programming-software/st-examples/mounting/">USB Mounting (Drag-and-Drop) →</a>
 </div>
 
 
@@ -102,7 +132,7 @@
         <p><a class="" href="/docs/getting-started/">Getting Started</a></p>
         <p><a class="" href="/docs/applications/">Applications</a></p>
         <p><a class="" href="/docs/sensor-edition/">Sensor Edition</a></p>
-        <p><a class=" is-active" href="/docs/tracking-edition/">Tracking Edition</a></p>
+        <p><a class="" href="/docs/tracking-edition/">Tracking Edition</a></p>
       </nav>
       <nav class="column is-one-quarter">
         <h3 class="title is-6">Contributing</h3>
