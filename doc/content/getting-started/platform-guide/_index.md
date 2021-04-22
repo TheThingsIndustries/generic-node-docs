@@ -21,6 +21,10 @@ For example, if you are planning to use the {{% gnse %}}, you would need:
 1. {{% gnse %}} board
 2. {{% gnse %}} application
 
+## Getting a device
+
+{{% gnse %}} is currently in Beta phase. Join the early access program and become one of the first to access the node at [genericnode.com](https://www.genericnode.com/)
+
 ## Setting up your node
 
 To learn to setup your {{% gnse %}}, follow these sections:
