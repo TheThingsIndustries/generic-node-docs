@@ -78,7 +78,7 @@ If you add a section and it needs a troubleshooting page, title the troubleshoot
 The Generic Node docs cover all flavors of Geneic Node platform devices:
 
 - Generic Node Sensor Edition
-- Generic Node Tracking Edition
+- Generic Node Tracker Edition
 
 ## Style Guidelines
 
@@ -95,7 +95,7 @@ Please respect the following guidelines for content in our documentation site.
 - Paragraphs typically consist of at least two sentences.
 - Use an empty line between all blocks (headings, paragraphs, lists, ...).
 - Prefer text over bullet lists or enumerations. For bullets, use `-`, for enumerations `1.` etc.
-- Explicitly call this product "Geneic Node Sensor/Tracking Edition". Not "the node" etc. You can use the shortcode `{{% gn %}}`, `{{% gnse %}}` or `{{% gnte %}}` which will expand to "Generic Node", "Generic Node Sensor Edition" or "Generic Node Tracking Edition" respectively.
+- Explicitly call this product "Geneic Node Sensor/Tracker Edition". Not "the node" etc. You can use the shortcode `{{% gn %}}`, `{{% gnse %}}` or `{{% gnte %}}` which will expand to "Generic Node", "Generic Node Sensor Edition" or "Generic Node Tracker Edition" respectively.
 - Avoid shortening, i.e. write "it is" instead of "it's".
 - Write guides as a goal-oriented journey.
 - Unless already clear from context, use a clearer term than "user", especially if there are multiple kinds (network operator, gateway owner, application developer, ...).
