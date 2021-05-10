@@ -36,7 +36,7 @@ To learn to setup your {{% gnse %}}, follow these sections:
 
 If you want to learn more about your node, take a look at the following sections:
 
-- [Hardware]({{< ref "/hardware" >}})
-- [Software]({{< ref "/software" >}})
+- [Hardware]({{< ref "/sensor-edition/hardware" >}})
+- [Software]({{< ref "/sensor-edition/software" >}})
 - [Sensor Edition]({{< ref "/sensor-edition" >}})
-- [Tracking Edition]({{< ref "/Tracking-edition" >}})
+- [Tracker Edition]({{< ref "/tracker-edition" >}})
