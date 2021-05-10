@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="generator" content="Hugo 0.70.0" />
-  <title>STM32CubeProgrammer | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/" />
+  <title>Software | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/tracker-edition/software/" />
   <link rel="alternate icon" href="/docs/favicon.ico">
   <link rel="alternate icon" type="image/png" href="/docs/favicon.png">
   <link rel="icon" type="image/png" href="/docs/favicon.png">
   <link rel="stylesheet" href="https://www.genericnode.com/docs/css/theme.min.3f836fedc9c6a2b86da58d8c83e93a00336ad147490c56a3e1c424807e9787c1.css" integrity="sha256-P4Nv7cnGorhtpY2Mg&#43;k6ADNq0UdJDFaj4cQkgH6Xh8E=" crossorigin="anonymous">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta itemprop="name" content="STM32CubeProgrammer">
+  <meta itemprop="name" content="Software">
   <meta itemprop="description" content="">
   <meta itemprop="keywords" content="">
-  <meta property="og:title" content="STM32CubeProgrammer">
+  <meta property="og:title" content="Software">
   <meta property="og:description" content="">
-  <meta property="og:url" content="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/">
-  <meta name="twitter:title" content="STM32CubeProgrammer" />
+  <meta property="og:url" content="https://www.genericnode.com/docs/tracker-edition/software/">
+  <meta name="twitter:title" content="Software" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary" />
 </head>
@@ -63,18 +63,12 @@
       <div class="column is-one-third">
 
 
-<h2 class="title is-size-4">ST-LINK Programming Methods</h2>
+<h2 class="title is-size-4">Software</h2>
 
 <ul class="menu-list">
-<a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/" class="">Overview</a>
+<a href="https://www.genericnode.com/docs/tracker-edition/software/" class="is-active">Overview</a>
 <li>
-  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/" class="is-active">STM32CubeProgrammer</a>
-</li>
-<li>
-  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/" class="">STM32CubeIDE</a>
-</li>
-<li>
-  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/mounting/" class="">USB Mounting (Drag-and-Drop)</a>
+  <a href="https://www.genericnode.com/docs/tracker-edition/software/te-firmware/" class="">Tracker Edition Firmware</a>
 </li>
 </ul>
 
@@ -86,7 +80,7 @@
       
       <div class="column is-two-thirds">
 
-<h1 class="title is-size-2">STM32CubeProgrammer
+<h1 class="title is-size-2">Software
 
 
 </h1>
@@ -94,51 +88,7 @@
 <div class="content">
 
 
-<p><a href="https://www.st.com/en/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a> allows for multiple configuration options to work with any ST-LINK probe. It has both a graphical and a command-line interface, as well as support for multiple operating systems.</p>
-<h2 id="gui-version">GUI version</h2>
-<ol>
-<li>Launch STM32CubeProgrammer.</li>
-</ol>
-<figure>
-    <img src="cubeprog_startupscreen.png"
-         alt="cubeprog startup screen"/> 
-</figure>
-
-<ol start="2">
-<li>Setup your preferred configuration settings and click the <strong>Connect</strong> button on the top right.</li>
-</ol>
-<figure>
-    <img src="cubeprog_programming_button.png"
-         alt="cubeprog connect button"/> 
-</figure>
-
-<ol start="3">
-<li>Next, click the <em><strong>Erasing and Programming</strong></em> button on the left.</li>
-</ol>
-<figure>
-    <img src="cubeprog_options.png"
-         alt="cubeprog erase option"/> 
-</figure>
-
-<ol start="4">
-<li>In the download section, choose the location of your executable file and start address (default is <code>0x08000000</code>), then hit the <em><strong>Start Programming</strong></em> button.</li>
-</ol>
-<figure>
-    <img src="cubeprog_download.png"
-         alt="cubeprog download section"/> 
-</figure>
-
-<h2 id="cli-version">CLI version</h2>
-<p>The CLI version should be automatically available after installing STM32CubeProgrammer.</p>
-<div class="notification is-info is-light has-text-dark">
-  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
-  Windows version will be named <code>STM32_Programmer_CLI.exe</code>. Append <code>.exe</code> to all the following commands if you are running on Windows.
-</div>
-<p>Available options for STM32_Programmer_CLI can be listed with:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">STM32_Programmer_CLI -h
-</code></pre></div><p>To program a binary executable, use the following command:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">STM32_Programmer_CLI -c <span class="nv">port</span><span class="o">=</span>SWD -w &lt;binary-file-location&gt; 0x08000000
-</code></pre></div>
+<p>Get familiar with the Generic Node Tracker Edition software components and libraries.</p>
 </div>
 
 
@@ -147,8 +97,7 @@
 
 
 <div class="is-clearfix">
-<a class="button is-pulled-left" href="/docs/getting-started/programming-software/st-examples/">← ST-LINK Programming Methods</a>
-<a class="button is-pulled-right" href="/docs/getting-started/programming-software/st-examples/stcubeide/">STM32CubeIDE →</a>
+<a class="button is-pulled-right" href="/docs/tracker-edition/software/te-firmware/">Tracker Edition Firmware →</a>
 </div>
 
 
