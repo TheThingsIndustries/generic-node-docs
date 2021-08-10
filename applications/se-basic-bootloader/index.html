@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="has-navbar-fixed-top">
+
+<head>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11557232-16"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-11557232-16');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="generator" content="Hugo 0.70.0" />
+  <title>Sensor Edition: basic_bootloader | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/applications/se-basic-bootloader/" />
+  <link rel="alternate icon" href="/docs/favicon.ico">
+  <link rel="alternate icon" type="image/png" href="/docs/favicon.png">
+  <link rel="icon" type="image/png" href="/docs/favicon.png">
+  <link rel="stylesheet" href="https://www.genericnode.com/docs/css/theme.min.3f836fedc9c6a2b86da58d8c83e93a00336ad147490c56a3e1c424807e9787c1.css" integrity="sha256-P4Nv7cnGorhtpY2Mg&#43;k6ADNq0UdJDFaj4cQkgH6Xh8E=" crossorigin="anonymous">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta itemprop="name" content="Sensor Edition: basic_bootloader">
+  <meta itemprop="description" content="">
+  <meta itemprop="keywords" content="">
+  <meta property="og:title" content="Sensor Edition: basic_bootloader">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://www.genericnode.com/docs/applications/se-basic-bootloader/">
+  <meta name="twitter:title" content="Sensor Edition: basic_bootloader" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:card" content="summary" />
+</head>
+
+
+<body>
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs/">
+        <img class="logo" src="/docs/img/GN-logo.svg">
+        <p class="navbar-item is-size-7"></p>
+      </a>
+      <span class="navbar-burger burger" data-target="topMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="topMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/docs/getting-started/">Getting Started</a>
+        <a class="navbar-item" href="/docs/applications/">Applications</a>
+        <a class="navbar-item" href="/docs/sensor-edition/">Sensor Edition</a>
+        <a class="navbar-item" href="/docs/tracker-edition/">Tracker Edition</a>
+      </div>
+      <div class="navbar-end">
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      
+      <div class="column is-one-third">
+
+
+<h2 class="title is-size-4">Sensor Edition: basic_bootloader</h2>
+
+<ul class="menu-list">
+<a href="https://www.genericnode.com/docs/applications/se-basic-bootloader/" class="is-active">Overview</a>
+<li>
+  <a href="https://www.genericnode.com/docs/applications/se-basic-bootloader/configuration/" class="">Configuration</a>
+</li>
+<li>
+  <a href="https://www.genericnode.com/docs/applications/se-basic-bootloader/setup/" class="">Setup</a>
+</li>
+<li>
+  <a href="https://www.genericnode.com/docs/applications/se-basic-bootloader/observation/" class="">Observation</a>
+</li>
+</ul>
+
+
+
+
+
+      </div>
+      
+      <div class="column is-two-thirds">
+
+<h1 class="title is-size-2">Sensor Edition: basic_bootloader
+
+
+</h1>
+
+<div class="content">
+
+
+<p>The <a href="https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/basic_bootloader">application</a> provides a basic bootloader that can be combined with other applications to perform a specific functionality at boot time.</p>
+<blockquote>
+<p>If you want to learn more about the purpose of a bootloader, we recommend reading this great <a href="https://interrupt.memfault.com/blog/how-to-write-a-bootloader-from-scratch">blog post</a>.</p>
+</blockquote>
+<p><code>basic_bootloader</code> performs one of two functionalities based on the GNSE button:</p>
+<ol>
+<li>If the button is not pressed -&gt; boots the user flashed application</li>
+<li>If the button is pressed long enough -&gt; boots the ST internal bootloader</li>
+</ol>
+</div>
+
+
+
+
+
+
+<div class="is-clearfix">
+<a class="button is-pulled-right" href="/docs/applications/se-basic-bootloader/configuration/">Configuration →</a>
+</div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer background-footer">
+  <div class="container">
+    <div class="columns">
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">The Things Stack</h3>
+        <p><a class="" href="/docs/getting-started/">Getting Started</a></p>
+        <p><a class="" href="/docs/applications/">Applications</a></p>
+        <p><a class="" href="/docs/sensor-edition/">Sensor Edition</a></p>
+        <p><a class="" href="/docs/tracker-edition/">Tracker Edition</a></p>
+      </nav>
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">Contributing</h3>
+        <p><a class="" href="https://github.com/TheThingsIndustries/generic-node-se">GitHub</a></p>
+        <p><a class="" href="https://www.thethingsnetwork.org/forum/c/nodes/generic-node">Forum</a></p>
+      </nav>
+      
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">About Us</h3>
+        <p><a class="" href="https://www.thethingsnetwork.org">The Things Network</a></p>
+        <p><a class="" href="https://www.thethingsindustries.com">The Things Industries</a></p>
+      </nav>
+      </div>
+  </div>
+</footer>
+<script src="https://www.genericnode.com/docs/js/vendor/basicLightbox.min.js"></script>
+<script src="https://www.genericnode.com/docs/js/theme.min.6705961acdc7b360c900fe309485c5994ae9a75c5507bc88dbd1507420c40ae7.js" integrity="sha256-ZwWWGs3Hs2DJAP4wlIXFmUrpp1xVB7yI29FQdCDECuc=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
