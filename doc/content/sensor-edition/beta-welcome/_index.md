@@ -40,16 +40,16 @@ The [Getting started]({{< ref "/getting-started" >}}) is a great place to get fa
 
 ## Where to contribute?
 
-We use the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">{{% gnse %}} Github repository</a> in our development. You can <a href="https://github.com/TheThingsIndustries/generic-node-se/issues/new/choose" target="_blank">file an issue</a> to request a feature or report a bug.
+We use the [Generic Node Sensor Edition Github repository](https://github.com/TheThingsIndustries/generic-node-se) in our development. You can [file an issue](https://github.com/TheThingsIndustries/generic-node-se/issues/new/choose) to request a feature or report a bug.
 
-The <a href="https://www.thethingsnetwork.org/forum/c/nodes/generic-node" target="_blank">{{% gn %}} Forum</a> is where we will have discussions and where you can provide feedback.
+The [Generic Node Forum](https://www.thethingsnetwork.org/forum/c/nodes/generic-node) is where we will have discussions and where you can provide feedback.
 You will be added to a private group with other Beta developers.
 
 ## Things to try
 
 We will send you a couple of emails to assist you with trying-out some cool things that are only possible with the {{% gnse %}} like:
-- <a href="https://www.thethingsindustries.com/docs/devices/device-claiming/claim-devices/" target="_blank">QR code claiming</a>
-- <a href="https://www.thethingsindustries.com/docs/devices/claim-atecc608a/" target="_blank">Secure element claiming </a>
+- [QR code claiming](https://www.thethingsindustries.com/docs/devices/device-claiming/claim-devices/)
+- [Secure element claiming](https://www.thethingsindustries.com/docs/devices/claim-atecc608a/)
 - Adding external sensors
 - Using FreeRTOS with LoRaWAN
 - Using TinyML with LoRaWAN

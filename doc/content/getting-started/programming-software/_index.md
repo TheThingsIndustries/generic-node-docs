@@ -25,8 +25,8 @@ The wiring from the ST-LINK/V3 programmer &rarr; {{% gnse %}} is as follows:
 
 Optionally you can connect RX and TX pins to work with UART (either for sending and receiving messages or programming).
 
-6. RX &rarr; TX
-7. TX &rarr; RX
+6. RX &rarr; RX (Only with ST-LINK boards, other boards would be RX &rarr; TX)
+7. TX &rarr; TX (Only with ST-LINK boards, other boards would be TX &rarr; RX)
 
 {{< warning >}} Be careful not to mix VCC with VIN pin on the {{% gnse %}}. VIN should still be powered separately, either with the pin or the battery connector, as it powers the {{% gnse %}}. VCC is used as target voltage indicator. {{</ warning >}}
 

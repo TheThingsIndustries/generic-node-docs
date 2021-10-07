@@ -11,7 +11,7 @@ Get started by becoming familiar with the {{% gnse %}} on-board peripherals and 
 
 ## Working with the Generic Node Sensor Edition Repository
 
-It is always a good idea to get familiar with the available HW design files. Check out the <a href="https://github.com/TheThingsIndustries/generic-node-se" target="_blank">{{% gnse %}} on Github</a> to get familiar with the repository structure.
+It is always a good idea to get familiar with the available HW design files. Check out the [Generic Node Sensor Edition Github repository](https://github.com/TheThingsIndustries/generic-node-se) to get familiar with the repository structure.
 
 Next, clone the repository to get its local copy on your machine by running the following command:
 
@@ -21,7 +21,7 @@ $ git clone --branch develop \
 https://github.com/TheThingsIndustries/generic-node-se.git
 ```
 
-If you are not too familiar with Git, visit the official GitHub documentation to <a href="https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository" target="_blank">learn to clone a repository</a>.
+If you are not too familiar with Git, visit the official [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) to learn how to clone a repository.
 
 ## Becoming familiar with the Generic Node Sensor Edition Board
 
