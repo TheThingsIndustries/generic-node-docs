@@ -108,14 +108,34 @@
 
 
 <p>If you are using <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> as your build environment, then using the same tool to program your Generic Node Sensor Edition is convenient.</p>
-<h2 id="steps-to-reproduce">Steps to reproduce</h2>
-<ol>
-<li>To program and run or debug Generic Node Sensor Edition, right-click on it and select <em><strong>Run As</strong></em> or <em><strong>Debug As</strong></em>. When programming, make sure you select <strong>STM32 Cortex-M C/C++ Application</strong> in the <strong>Run As</strong> or <strong>Debug As</strong> section.</li>
-</ol>
 <figure>
-    <img src="cubeide.png"
-         alt="cubeide run as"/> 
+    <img src="stm32cubeide.png"
+         alt="stm32 cube ide"/> 
 </figure>
+
+<h2 id="running-the-project">Running the Project</h2>
+<p>When the <a href="https://www.genericnode.com/docs/getting-started/se-sw/env-setup/stm32cubeide/">build</a> process is done you can flash the binary file to the Generic Node Sensor Edition by running the program from the STM32CubeIDE.</p>
+<p>Right click on the project name in the <strong>Project Explorer</strong> and select <strong>Run As -&gt; STM32 Cortex-M C/C++ Application</strong>.</p>
+<figure>
+    <img src="run_as.png"
+         alt="project run as"/> 
+</figure>
+
+<p>This will start to <strong>flash</strong> the compiled program to the Generic Node Sensor Edition. The following figure shows the <strong>Console</strong> output, for example, when running the <a href="https://www.genericnode.com/docs/applications/se-basic/">basic</a> project.</p>
+<figure>
+    <img src="file_download.png"
+         alt="file download"/> 
+</figure>
+
+<p>When the flashing finishes the code will immediately start to run on the Generic Node Sensor Edition. If the program prints text and data to the serial port during the execution they can be displayed on a <strong>Serial Terminal</strong>. The following figure shows the Serial output on <a href="https://marketplace.eclipse.org/content/tm-terminal">TM Terminal</a>, for example, when running the <a href="https://www.genericnode.com/docs/applications/se-basic/">basic</a> project.</p>
+<figure>
+    <img src="run_capture.png"
+         alt="serial terminal output"/> 
+</figure>
+
+<p>The STLINK-V3SET also supports <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/mounting/">Drag-and-drop flash programming</a> of binary files.</p>
+<p>If you want to reset the Generic Node Sensor Edition program that is running, you can press the <strong>reset</strong> button on the front of the Generic Node Sensor Edition and the current program will start again.</p>
+<p>If everything goes well you can remove Generic Node Sensor Edition from the STLINK-V3SET.</p>
 </div>
 
 
