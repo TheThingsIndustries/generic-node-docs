@@ -15,7 +15,7 @@ To be able to build the applications from the command-line, you need to install 
 
 1. [Git](https://git-scm.com/)
 2. [arm-none-eabi-gcc](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
-3. [CMAKE](https://cmake.org/download/)
+3. [CMake](https://cmake.org/download/)
 4. [Ninja](https://ninja-build.org/) or [Make](https://www.gnu.org/software/make/) or [MinGW](https://osdn.net/projects/mingw/releases/)
 
 {{< note >}} The Make tool might already be installed on your Unix-based system. Run `make -v` in your terminal to check. {{</ note >}}
