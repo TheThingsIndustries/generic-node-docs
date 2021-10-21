@@ -19,7 +19,7 @@ It provides an overview of the device features and possible use cases.
 
 ## Getting started with {{% gnse %}}
 
-The video below provides a beginner friendly getting started with the {{% gnse %}}.
+The video below provides a beginner-friendly getting started with the {{% gnse %}}.
 
 {{< youtube id="aHVi-FglC4Y" title="Getting started with the Generic Node Sensor Edition" >}}
 

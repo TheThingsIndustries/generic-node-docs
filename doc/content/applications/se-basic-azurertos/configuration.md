@@ -10,7 +10,7 @@ Key configurations are stated below:
 
 ### Azure RTOS
 
-- `MEM_BYTE_POOL_SIZE`,`THREAD_STACK_SIZE`,`QUEUE_SIZE` in bytes defines Azure RTOS memory pool, threads and queue sizes
+`MEM_BYTE_POOL_SIZE`,`THREAD_STACK_SIZE`,`QUEUE_SIZE` in bytes defines Azure RTOS memory pool, threads and queue sizes:
 
 ```c
 #define MEM_BYTE_POOL_SIZE 9120
@@ -22,13 +22,13 @@ Key configurations are stated below:
 
 ### App activity
 
-- `GNSE_TINY_TRACER_ENABLE` enables UART (115200/8-N-1) logging of application activity
+`GNSE_TINY_TRACER_ENABLE` enables UART (115200/8-N-1) logging of application activity:
 
 ```c
 #define GNSE_TINY_TRACER_ENABLE 1
 ```
 
-- `TX_DELAY` in milliseconds defines the message passing rate from thread 1 to thread 2.
+`TX_DELAY` in milliseconds defines the message passing rate from thread 1 to thread 2:
 
 ```c
 #define TX_DELAY                 (5000)

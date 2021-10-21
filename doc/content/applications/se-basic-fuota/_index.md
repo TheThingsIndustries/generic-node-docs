@@ -5,7 +5,7 @@ weight: 5
 distributions: null
 ---
 
-This [application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/basic_fuota) provides a basic example of LoRaWAN FUOTA (Firmware Update Over The Air) functionality.
+The [basic_fuota application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/basic_fuota) provides a basic example of LoRaWAN FUOTA (Firmware Update Over The Air) functionality.
 
 <!--more-->
 

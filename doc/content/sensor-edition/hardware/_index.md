@@ -5,4 +5,4 @@ weight: 1
 distributions: null
 ---
 
-Get familiar with the {{% gnse %}} hardware and on-board peripherals.
+This section will help you get familiar with the {{% gnse %}} hardware and on-board peripherals.

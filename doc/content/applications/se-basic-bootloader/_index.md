@@ -5,7 +5,7 @@ weight: 3
 distributions: null
 ---
 
-The [application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/basic_bootloader) provides a basic bootloader that can be combined with other applications to perform a specific functionality at boot time.
+The [basic_bootloader application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/basic_bootloader) provides a basic bootloader that can be combined with other applications to perform a specific functionality at boot time.
 
 <!--more-->
 
@@ -13,5 +13,5 @@ The [application](https://github.com/TheThingsIndustries/generic-node-se/tree/de
 
 `basic_bootloader` performs one of two functionalities based on the GNSE button:
 
-1. If the button is not pressed -> boots the user flashed application
-2. If the button is pressed long enough -> boots the ST internal bootloader
+1. If the button is not pressed &#8594; boots the user flashed application
+2. If the button is pressed long enough &#8594; boots the ST internal bootloader

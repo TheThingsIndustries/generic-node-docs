@@ -11,7 +11,7 @@ If you are using [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cub
 
 {{< figure src="stm32cubeide.png" alt="stm32 cube ide" >}}
 
-## Running the Project
+## Running the project
 
 When the [build]({{< ref "/getting-started/se-sw/env-setup/stm32cubeide" >}}) process is done you can flash the binary file to the {{% gnse %}} by running the program from the STM32CubeIDE.
 
