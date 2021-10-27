@@ -5,7 +5,7 @@ weight: 7
 distributions: null
 ---
 
-This [application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/freefall_lorawan) is used to detect free fall events and also serves as a template for acceleration detection handling.
+The [freefall_lorawan application](https://github.com/TheThingsIndustries/generic-node-se/tree/develop/Software/app/freefall_lorawan) is used to detect free fall events and also serves as a template for acceleration detection handling.
 
 <!--more-->
 

@@ -7,12 +7,12 @@ distributions: null
 
 The {{% gnse %}} software contains multiple applications, libraries and drivers.
 
-The {{% gnse %}} software architecture observed below depicts three main layers:
+The {{% gnse %}} software architecture presented below depicts three main layers:
 1. Target
 2. Library
 3. Application
 
-{{< figure src="gnse_sw_arch.png" alt="Software Architecture" >}}
+{{< figure src="gnse_sw_arch.png" alt="Software Architecture" class="plain" >}}
 
 ### Target
 
@@ -32,7 +32,7 @@ The library (lib) layer contains functions and APIs that abstract the hardware a
 
 Most of the libraries are built by third-parties such as the hardware manufacturer, and all of them are integrated within the {{% gnse %}} platform to ensure a better experience when building applications.
 
-Different applications use different libraries depending on the application desired functionality.
+Different applications use different libraries depending on the desired application functionality.
 
 For example, an application that samples sensors and sends the data using LoRaWAN will utilize the Sensors, GNSE APIs, bare-metal scheduler and LoRaWAN libraries.
 

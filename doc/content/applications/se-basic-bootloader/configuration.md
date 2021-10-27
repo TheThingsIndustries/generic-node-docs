@@ -6,7 +6,7 @@ weight: -1
 
 `basic_bootloader` key configurations:
 
-### Memory Map
+### Memory map
 
 The internal flash (ROM) memory map can be configured to accommodate a bootloader and an application by adjusting the parameters defined in `memory_map.ld`.
 
@@ -19,7 +19,7 @@ APPROM   (rx)  : ORIGIN = 0x0800B000, LENGTH = 0x000035000   /* Flash memory ded
 
 The application behavior can be adjusted by modifying `conf/app_conf.h`.
 
-- `GNSE_TINY_TRACER_ENABLE` enables UART (115200/8-N-1) logging of application activity
+`GNSE_TINY_TRACER_ENABLE` enables UART (115200/8-N-1) logging of application activity:
 
 ```c
 #define GNSE_TINY_TRACER_ENABLE 1

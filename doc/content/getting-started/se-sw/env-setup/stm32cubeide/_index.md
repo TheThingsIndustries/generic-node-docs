@@ -4,7 +4,8 @@ description: ""
 weight: 2
 distributions: null
 ---
-Setup the environment and build an application using ST STM32CubeIDE.
+
+This section helps you set up the environment and build an application using ST STM32CubeIDE.
 
 <!--more-->
 
@@ -17,35 +18,36 @@ Setup the environment and build an application using ST STM32CubeIDE.
 
 ## Setup
 
-1. Clone the project & checkout `develop` branch:
+1. Clone the {{% gnse %}} GitHub project as mentioned [before](http://localhost:1313/getting-started/se-sw/) and checkout the `develop` branch:
 
 ```bash
-$ git clone --branch develop --recurse-submodules \
-https://github.com/TheThingsIndustries/generic-node-se.git
+git checkout develop
 ```
+
 2. Launch STM32CubeIDE, choose your workspace location and press **Launch**.
 
-{{< figure src="cubeide_workspace.png" alt="cubeide workspace" >}}
+{{< figure src="cubeide_workspace.png" alt="cubeide workspace" class="plain" >}}
 
 3. Choose **File &#8594; Import**.
 
-{{< figure src="cubeide_import.png" alt="cubeide import" >}}
+{{< figure src="cubeide_import.png" alt="cubeide import" class="plain" >}}
 
 4. Select **Existing Projects into Workspace** and click **Next >**.
 
-{{< figure src="cubeide_import_existing.png" alt="cubeide import existing" >}}
+{{< figure src="cubeide_import_existing.png" alt="cubeide import existing" class="plain" >}}
 
-5. Choose **Browse...**, navigate to the cloned project folder and click **Finish**.
-{{< figure src="cubeide_projects.png" alt="cubeide projects" >}}
+5. Choose **Browse...**, navigate to the cloned {{% gnse %}} project folder and click **Finish**.
 
-6. You should now be able to see all the imported projects in the **Project Explorer** on the left. 
+{{< figure src="cubeide_projects.png" alt="cubeide projects" class="plain" >}}
 
-{{< figure src="cubeide_imported.png" alt="cubeide imported" >}}
+6. You should now be able to see all imported projects in the **Project Explorer** on the left. 
 
-## Build Example
+{{< figure src="cubeide_imported.png" alt="cubeide imported" class="plain" >}}
+
+## Build example
 
 To build any of the imported projects, right-click on it and select **Build Project**.
 
 {{< figure src="cubeide_build.png" alt="cubeide build" >}}
 
-{{< note >}} If you build the `basic` app, you will find your newly built application in the `generic-node-se/Software/app/basic/Debug/` folder. {{</ note >}}
+{{< note >}} If you build the `basic` app, find your newly built application in the `generic-node-se/Software/app/basic/Debug/` folder. {{</ note >}}

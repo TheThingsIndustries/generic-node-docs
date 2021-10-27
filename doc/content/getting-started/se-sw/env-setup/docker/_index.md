@@ -5,7 +5,7 @@ weight: 1
 distributions: null
 ---
 
-Setup the environment and build an application using a Docker image.
+This section helps you set up the environment and build an application using a Docker image.
 
 <!--more-->
 
@@ -15,11 +15,10 @@ Setup the environment and build an application using a Docker image.
 
 ## Setup
 
-1. Clone project & checkout `develop` branch:
+1. Clone the {{% gnse %}} GitHub project as mentioned [before](http://localhost:1313/getting-started/se-sw/) and checkout the `develop` branch:
 
 ```bash
-$ git clone --branch develop --recurse-submodules \
-https://github.com/TheThingsIndustries/generic-node-se.git
+git checkout develop
 ```
 
 2. Run the build command:
@@ -28,15 +27,17 @@ https://github.com/TheThingsIndustries/generic-node-se.git
 $ cd generic-node-se/
 $ docker build -t gnse_img ./Software
 ```
-If the image build was successful, you should be able to use the image as your build environment.
 
-3. Add this line to `generic-node-se/Software/cross.cmake` file:
+If the image build was successful, you will be able to use the image as your build environment.
+
+3. Add the following line to the `generic-node-se/Software/cross.cmake` file:
 
 `set(TOOLCHAIN_PREFIX "/toolchain/gcc-arm-none-eabi-9-2020-q2-update/")`
 
-## Build Example
+## Build example
 
-You can attach and bind your project folder to your new image:
+Bind your {{% gnse %}} project folder to the newly built Docker image:
+
 
 ```bash
 $ cd generic-node-se\
@@ -47,7 +48,7 @@ $ docker run \
 gnse_img
 ```
 
-Now you should be able to build your application in the attached container:
+You should now be able to build your application in the attached container:
 
 ```bash
 $ mkdir -p build/debug
@@ -56,8 +57,9 @@ $ cmake -G Ninja ../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../../cro
 $ ninja -v
 ```
 
-You will find your newly built application in the `generic-node-se/Software/build/debug/app/basic` folder.
+{{< note >}} You can also configure the following build fields in the `cmake` command:
+- `DTARGET_APP` to build a different application (try `-DTARGET_APP=basic_lorawan`)
+- `DCMAKE_BUILD_TYPE` to `Release` (instead of `Debug`) to build a smaller application for release purposes
+{{</ note >}}
 
-You can also configure the following build fields in the `cmake` command:
-- `TARGET_APP` to build a different application (try `-DTARGET_APP=basic_lorawan`)
-- `DCMAKE_BUILD_TYPE` to `Release` instead of `Debug` to build a smaller application for release purposes
+Find your newly built application in the `generic-node-se/Software/build/debug/app/basic` folder.

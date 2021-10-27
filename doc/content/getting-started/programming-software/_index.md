@@ -5,7 +5,7 @@ weight: 5
 distributions: null
 ---
 
-Become familiar with programming your executables to your {{% gnse %}} with the ST-LINK programmer.
+Follow this section to learn to program executables to your {{% gnse %}} with the ST-LINK programmer.
 
 <!--more-->
 
@@ -31,3 +31,5 @@ Optionally you can connect RX and TX pins to work with UART (either for sending 
 {{< warning >}} Be careful not to mix VCC with VIN pin on the {{% gnse %}}. VIN should still be powered separately, either with the pin or the battery connector, as it powers the {{% gnse %}}. VCC is used as target voltage indicator. {{</ warning >}}
 
 {{< figure src="GNSE_v1.1_pinout.png" alt="GNSE pinout" >}}
+
+When you are done with the setup, visit the [ST-LINK Programming Methods]({{< ref "/getting-started/programming-software/st-examples" >}}) section to choose and follow a guide using a development tool that best fits your preferences. Then you can also check out the [Applications]({{< ref "/applications" >}}) section for application examples.

@@ -5,6 +5,6 @@ weight: 2
 distributions: null
 ---
 
-Get familiar with the {{% gnte %}} software components and libraries.
+This section will help you get familiar with the {{% gnte %}} software components and libraries.
 
 <!--more-->

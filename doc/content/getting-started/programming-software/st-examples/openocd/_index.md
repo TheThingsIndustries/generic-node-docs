@@ -16,6 +16,7 @@ To program a binary executable, run the following command in your terminal:
 ```bash
 openocd -f interface/stlink.cfg -f target/stm32wlx.cfg -c "program <binary-file-location> verify reset exit 0x08000000"
 ```
+
 Some parts of the command above are optional:
 - `verify` is used to verify the loaded firmware after programming;
 - `reset` will start the programmed executable without having to power cycle the device;
@@ -26,6 +27,7 @@ Some parts of the command above are optional:
 ```bash
 openocd -f interface/stlink.cfg -f target/stm32wlx.cfg -c "program <elf-file-location> verify reset exit"
 ```
+
 The binary file is extracted from this file during compilation of the Generic Node firmware, so it should not make a difference which file you use.
 
 ## Using VSCode
@@ -86,7 +88,7 @@ You need to update "program" and "setupCommands" fields with the application you
 You need to update "miDebuggerPath" and "debugServerPath" fields with the system paths of your tool chain gdb and OpenOCD binary.
 {{</ note >}}
 
-{{< figure src="vscode_launcher.png" alt="VSCode launcher" >}}
+{{< figure src="vscode_launcher.png" alt="VSCode launcher" class="plain" >}}
 
 3. You can now launch the flashing/debugging process using [VSCode's built-in debugger](https://code.visualstudio.com/docs/editor/debugging).
 
