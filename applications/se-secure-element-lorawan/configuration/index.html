@@ -105,17 +105,14 @@
 
 
 <p>The application behavior can be adjusted by modifying <code>conf/app_conf.h</code>.</p>
-<ul>
-<li><code>GNSE_ADVANCED_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity</li>
-</ul>
+<p><code>GNSE_ADVANCED_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity:</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define GNSE_ADVANCED_TRACER_ENABLE 1
-</span></code></pre></div><ul>
-<li><code>DEBUGGER_ON</code> enables the use of a debugger in low power mode</li>
-</ul>
+</span></code></pre></div><p><code>DEBUGGER_ON</code> enables the use of a debugger in low power mode:</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define DEBUGGER_ON       1
-</span></code></pre></div><blockquote>
-<p><strong>Note:</strong> Please keep in mind that it is best to disable the tracer and debugger functionalities to reduce power consumption.</p>
-</blockquote>
+</span></code></pre></div><div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  Please keep in mind that it is best to disable the tracer and debugger functionalities to reduce power consumption.
+</div>
 
 </div>
 

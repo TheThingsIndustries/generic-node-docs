@@ -107,8 +107,8 @@
 <div class="content">
 
 
-<p><a href="http://openocd.org/">OpenOCD</a> is commonly used for on-chip debugging, but can also be used to easily program executables via CLI.</p>
-<h2 id="steps-to-reproduce">Steps to reproduce</h2>
+<p><a href="http://openocd.org/">OpenOCD</a> is commonly used for on-chip debugging, but can also be used to easily program executables via CLI and VSCode.</p>
+<h2 id="using-the-cli">Using the CLI</h2>
 <p>To program a binary executable, run the following command in your terminal:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">openocd -f interface/stlink.cfg -f target/stm32wlx.cfg -c <span class="s2">&#34;program &lt;binary-file-location&gt; verify reset exit 0x08000000&#34;</span>
 </code></pre></div><p>Some parts of the command above are optional:</p>
@@ -120,6 +120,72 @@
 <p><code>0x08000000</code> signifies the starting address of the user program. If you do not wish to input this, you can also opt to program the <strong>elf</strong> file (with the <strong>.elf</strong> filename extension) using the following command:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">openocd -f interface/stlink.cfg -f target/stm32wlx.cfg -c <span class="s2">&#34;program &lt;elf-file-location&gt; verify reset exit&#34;</span>
 </code></pre></div><p>The binary file is extracted from this file during compilation of the Generic Node firmware, so it should not make a difference which file you use.</p>
+<h2 id="using-vscode">Using VSCode</h2>
+<p>OpenOCD can be used in combination with VSCode in order to flash and debug applications.</p>
+<ol>
+<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug">Cortex-Debug</a></li>
+<li>Create <code>launch.json</code> inside <code>.vscode</code> folder and add the following lines:</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;0.2.0&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;configurations&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Debug-STM32WL&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;cppdbg&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;request&#34;</span><span class="p">:</span> <span class="s2">&#34;launch&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;program&#34;</span><span class="p">:</span> <span class="s2">&#34;${workspaceRoot}/Software/build/debug/app/basic/basic.elf&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;args&#34;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="nt">&#34;stopAtEntry&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&#34;cwd&#34;</span><span class="p">:</span> <span class="s2">&#34;${workspaceRoot}&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;environment&#34;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="nt">&#34;externalConsole&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&#34;debugServerArgs&#34;</span><span class="p">:</span> <span class="s2">&#34;-f interface/stlink.cfg -f target/stm32wlx.cfg&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;serverLaunchTimeout&#34;</span><span class="p">:</span> <span class="mi">20000</span><span class="p">,</span>
+            <span class="nt">&#34;filterStderr&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&#34;filterStdout&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&#34;serverStarted&#34;</span><span class="p">:</span> <span class="s2">&#34;Info\\ :\\ [\\w\\d\\.]*:\\ hardware&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;setupCommands&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;cd ${workspaceRoot}/Software/build&#34;</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;file debug/app/basic/basic.elf&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;load file&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;target extended-remote localhost:3333&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;connect to target&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;monitor reset halt&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;perform a reset and halt the target&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;load&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;flash target&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;monitor reset init&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;perform a reset and init the target&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;set output-radix 16&#34;</span><span class="p">,</span> <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;set the default numeric base to 16&#34;</span><span class="p">,</span> <span class="nt">&#34;ignoreFailures&#34;</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&#34;logging&#34;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&#34;moduleLoad&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;trace&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;engineLogging&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;programOutput&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&#34;exceptions&#34;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;MIMode&#34;</span><span class="p">:</span> <span class="s2">&#34;gdb&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;miDebuggerPath&#34;</span><span class="p">:</span> <span class="s2">&#34;/Users/UserName/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-gdb&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;debugServerPath&#34;</span><span class="p">:</span> <span class="s2">&#34;/usr/local/bin/openocd&#34;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  You need to update &ldquo;program&rdquo; and &ldquo;setupCommands&rdquo; fields with the application you plan to flash and debug.
+</div>
+<div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  You need to update &ldquo;miDebuggerPath&rdquo; and &ldquo;debugServerPath&rdquo; fields with the system paths of your tool chain gdb and OpenOCD binary.
+</div>
+<figure class="plain">
+    <img src="vscode_launcher.png"
+         alt="VSCode launcher"/> 
+</figure>
+
+<ol start="3">
+<li>You can now launch the flashing/debugging process using <a href="https://code.visualstudio.com/docs/editor/debugging">VSCode&rsquo;s built-in debugger</a>.</li>
+</ol>
+<figure>
+    <img src="vscode_debug.png"
+         alt="VSCode debug sidebar"/> 
+</figure>
 </div>
 
 

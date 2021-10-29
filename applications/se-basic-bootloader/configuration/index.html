@@ -105,15 +105,13 @@
 
 
 <p><code>basic_bootloader</code> key configurations:</p>
-<h3 id="memory-map">Memory Map</h3>
+<h3 id="memory-map">Memory map</h3>
 <p>The internal flash (ROM) memory map can be configured to accommodate a bootloader and an application by adjusting the parameters defined in <code>memory_map.ld</code>.</p>
 <pre><code>BOOTROM  (rx)  : ORIGIN = 0x08000000, LENGTH = 0x00000B000   /* Flash memory dedicated to bootloader */
 APPROM   (rx)  : ORIGIN = 0x0800B000, LENGTH = 0x000035000   /* Flash memory dedicated to application */
 </code></pre><h3 id="app-activity">App activity</h3>
 <p>The application behavior can be adjusted by modifying <code>conf/app_conf.h</code>.</p>
-<ul>
-<li><code>GNSE_TINY_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity</li>
-</ul>
+<p><code>GNSE_TINY_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity:</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define GNSE_TINY_TRACER_ENABLE 1
 </span></code></pre></div><blockquote>
 <p>Please note that it is considered as a best practice to disable logging when building bootloaders to reduce the binary size.</p>
