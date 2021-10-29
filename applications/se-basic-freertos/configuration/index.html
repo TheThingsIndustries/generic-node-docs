@@ -101,7 +101,7 @@
 <div class="content">
 
 
-<p>Key configurations are stated below:</p>
+<p>Key configurations are stated below.</p>
 <h3 id="freertos">FreeRTOS</h3>
 <p>FreeRTOS configurations can be adjusted by modifying <code>conf/FreeRTOSConfig.h</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define configMINIMAL_STACK_SIZE                 ((uint16_t)128)
@@ -109,13 +109,9 @@
 <span class="cp">#define configTOTAL_HEAP_SIZE                    ((size_t)8120)
 </span></code></pre></div><h3 id="app-activity">App activity</h3>
 <p>The application behavior can be adjusted by modifying <code>conf/app_conf.h</code>.</p>
-<ul>
-<li><code>GNSE_TINY_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity</li>
-</ul>
+<p><code>GNSE_TINY_TRACER_ENABLE</code> enables UART (115200/8-N-1) logging of application activity:</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define GNSE_TINY_TRACER_ENABLE 1
-</span></code></pre></div><ul>
-<li><code>TX_DELAY</code> in milliseconds defines the message passing rate from thread 1 to thread 2.</li>
-</ul>
+</span></code></pre></div><p><code>TX_DELAY</code> in milliseconds defines the message passing rate from thread 1 to thread 2:</p>
 <div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define TX_DELAY                 (5000)
 </span></code></pre></div>
 </div>

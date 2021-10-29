@@ -112,13 +112,13 @@
 <pre><code>set(LINKER_SCRIPT ${MCU_DIR}/app.ld)
 </code></pre><h3 id="building-with-stm32cubeide">Building with STM32CubeIDE</h3>
 <p>If you are building using STM32CubeIDE, then there is no need to change the linker script when building a <code>basic_bootloader</code> binary as can be seen below.</p>
-<figure>
+<figure class="plain">
     <img src="../stm32cubeide_linker_bootloader.png"
          alt="bootloader STM32CubeIDE linker config"/> 
 </figure>
 
 <p>But, make sure to change the application linker script from <code>../../../target/stm32wl55xx_flash.ld</code> to <code>../../../target/app.ld</code>.</p>
-<figure>
+<figure class="plain">
     <img src="../stm32cubeide_linker_app.png"
          alt="basic_lorawan STM32CubeIDE linker config"/> 
 </figure>

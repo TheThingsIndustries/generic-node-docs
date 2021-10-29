@@ -107,46 +107,49 @@
 <div class="content">
 
 
-<p>Setup the environment and build an application using a Docker image.</p>
+<p>This section helps you set up the environment and build an application using a Docker image.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li><a href="https://docs.docker.com/get-docker/">Docker</a></li>
 </ol>
 <h2 id="setup">Setup</h2>
 <ol>
-<li>Clone project &amp; checkout <code>develop</code> branch:</li>
+<li>Clone the Generic Node Sensor Edition GitHub project as mentioned <a href="http://localhost:1313/getting-started/se-sw/">before</a> and checkout the <code>develop</code> branch:</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ git clone --branch develop --recurse-submodules <span class="se">\
-</span><span class="se"></span>https://github.com/TheThingsIndustries/generic-node-se.git
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git checkout develop
 </code></pre></div><ol start="2">
 <li>Run the build command:</li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> generic-node-se/
 $ docker build -t gnse_img ./Software
-</code></pre></div><p>If the image build was successful, you should be able to use the image as your build environment.</p>
+</code></pre></div><p>If the image build was successful, you will be able to use the image as your build environment.</p>
 <ol start="3">
-<li>Add this line to <code>generic-node-se/Software/cross.cmake</code> file:</li>
+<li>Add the following line to the <code>generic-node-se/Software/cross.cmake</code> file:</li>
 </ol>
 <p><code>set(TOOLCHAIN_PREFIX &quot;/toolchain/gcc-arm-none-eabi-9-2020-q2-update/&quot;)</code></p>
-<h2 id="build-example">Build Example</h2>
-<p>You can attach and bind your project folder to your new image:</p>
+<h2 id="build-example">Build example</h2>
+<p>Bind your Generic Node Sensor Edition project folder to the newly built Docker image:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">cd</span> generic-node-se<span class="se">\
 </span><span class="se"></span>$ docker run <span class="se">\
 </span><span class="se"></span>-it <span class="se">\
 </span><span class="se"></span>--name gnse <span class="se">\
 </span><span class="se"></span>--mount <span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&#34;</span>/Software,target<span class="o">=</span>/gnse <span class="se">\
 </span><span class="se"></span>gnse_img
-</code></pre></div><p>Now you should be able to build your application in the attached container:</p>
+</code></pre></div><p>You should now be able to build your application in the attached container:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir -p build/debug
 $ <span class="nb">cd</span> build/debug
 $ cmake -G Ninja ../.. -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>../../cross.cmake -DTARGET_APP<span class="o">=</span>basic
 $ ninja -v
-</code></pre></div><p>You will find your newly built application in the <code>generic-node-se/Software/build/debug/app/basic</code> folder.</p>
-<p>You can also configure the following build fields in the <code>cmake</code> command:</p>
+</code></pre></div><div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  <p>You can also configure the following build fields in the <code>cmake</code> command:</p>
 <ul>
-<li><code>TARGET_APP</code> to build a different application (try <code>-DTARGET_APP=basic_lorawan</code>)</li>
-<li><code>DCMAKE_BUILD_TYPE</code> to <code>Release</code> instead of <code>Debug</code> to build a smaller application for release purposes</li>
+<li><code>DTARGET_APP</code> to build a different application (try <code>-DTARGET_APP=basic_lorawan</code>)</li>
+<li><code>DCMAKE_BUILD_TYPE</code> to <code>Release</code> (instead of <code>Debug</code>) to build a smaller application for release purposes</li>
 </ul>
+
+</div>
+<p>Find your newly built application in the <code>generic-node-se/Software/build/debug/app/basic</code> folder.</p>
 </div>
 
 
