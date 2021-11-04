@@ -49,7 +49,7 @@ After installing [CMake Tools](https://marketplace.visualstudio.com/items?itemNa
 
 {{< figure src="vscode_cmake_settings.png" alt="vscode CMake settings" class="plain" >}}
 
-You can adjust [CMake settings](https://github.com/microsoft/vscode-cmake-tools/blob/develop/docs/cmake-settings.md#cmake-settings) according to your environment.
+You can adjust [CMake settings](https://github.com/microsoft/vscode-cmake-tools/blob/master/docs/cmake-settings.md) according to your environment.
 
 For example, on Windows, you can adjust the generator to `MinGW Makefiles` instead of `Ninja`:
 
