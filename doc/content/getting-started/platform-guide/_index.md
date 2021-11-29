@@ -21,7 +21,7 @@ For example, if you are planning to use the {{% gnse %}}, you need:
 
 ## Get a device
 
-{{% gnse %}} is currently in Beta phase. Join the early access program and become one of the first to access the node at [genericnode.com](https://www.genericnode.com/)!
+{{% gnse %}} is currently in the production phase. Order one at [genericnode.com](https://www.genericnode.com/)!
 
 ## Explore your node's features
 
