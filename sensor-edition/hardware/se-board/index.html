@@ -105,12 +105,67 @@
          alt="The Front of the board"/> 
 </figure>
 </p>
+<ul>
+<li>
+<p><strong>STM32WL55CCU6 Dual-core M4/M0 + SoC</strong> - this is a dual-core SoC (System-on-Chip) that integrates a low-power microcontroller and a sub-gigahertz long-range radio. The microcontroller has two cores - Cortex-M4 and Cortex-M0. The chip provides 256-kilo bytes of flash memory and 64-kilo bytes of SRAM. Apart from that, it provides security features like secure key management services, secure boot, and a crypto library. The radio supports a full set of modulations which are LoRa, (G)FSK, (G)MSK, and BPSK. It provides a wide range of linear frequencies (150MHz - 960MHz) for LoRa which allows using Generic Node in multiple regions (Europe and the US) and provides the full flexibility to reach each country’s regulation requirement. The transmit power output of the radio can be adjustable up to 22dBm.</p>
+</li>
+<li>
+<p><strong>Onboard antenna</strong> - aka VirtualAntenna™ from <a href="https://ignion.io/virtual-antenna/">Ignion</a>. It can be electronically tuned to any frequency, for example, 868MHz or 915MHz.</p>
+</li>
+<li>
+<p><strong>External u.FL connector</strong> - this tiny connector allows connecting an external antenna, for example, a rubber duck antenna.</p>
+</li>
+<li>
+<p><strong>QWIIC I2C Connector</strong> - this 4-pin JST connector allows Generic Node to seamlessly interface with <a href="https://www.sparkfun.com/qwiic">SparkFun&rsquo;s Qwiic Connect System</a>.</p>
+</li>
+<li>
+<p><strong>ULP Buck-boost converter</strong> - takes input voltage usually from batteries and regulates to an output voltage which can be used by Generic Node.</p>
+</li>
+<li>
+<p><strong>Universal power input</strong> - This is a 2-pin JST connector that usually takes power from 2AA batteries (input voltage range: 2.2V - 5.5V).</p>
+</li>
+<li>
+<p><strong>Piezo speaker</strong> - provides audible feedback.</p>
+</li>
+<li>
+<p><strong>Programming / debug pins</strong> - there are 7 pins.</p>
+<ul>
+<li><strong>NRST</strong> - reset</li>
+<li><strong>SWD / PA13</strong> - programming/debug pin (bi-directional data pin)</li>
+<li><strong>CLK / PA14</strong> - programming/debug pin (clock signal)</li>
+<li><strong>TxD / PA2</strong> - serial pin (serial communication transmit data)</li>
+<li><strong>RxD / PA3</strong> - serial pin (serial communication receive data)</li>
+<li><strong>GND</strong> - ground</li>
+<li><strong>VCC</strong> - voltage out, 2.8 V</li>
+</ul>
+</li>
+<li>
+<p><strong>User GPIO pins</strong> - there are 7 pins.</p>
+<ul>
+<li><strong>PB3</strong> - SWO / RTS / internally connected to the user button</li>
+<li><strong>PA15</strong> - internally connected to the piezo speaker</li>
+<li><strong>PA12</strong> - I2C, SCL</li>
+<li><strong>PA11</strong> - I2C, SDA</li>
+<li><strong>VCC</strong> - voltage out, 2.8 V</li>
+<li><strong>GND</strong> - ground</li>
+<li><strong>VIN</strong> - voltage in</li>
+</ul>
+</li>
+</ul>
 <p>The back of the Generic Node Sensor Edition board:
 <figure>
     <img src="gnse_back_annotated.png"
          alt="The back of the board"/> 
 </figure>
 </p>
+<ul>
+<li><strong>User button</strong> - is a pushbutton internally connected to the pin PB3. Useful for getting user inputs.</li>
+<li><strong>RGB User LED</strong> - provides visual feedback.</li>
+<li><strong>Temperature and humidity sensor</strong> - <a href="https://www.sensirion.com/en/environmental-sensors/humidity-sensors/digital-humidity-sensor-shtc3-our-new-standard-for-consumer-electronics/">SHTC3</a> measures relative humidity with an accuracy of ±2 %RH and temperature with an accuracy of ±0.2 °C.</li>
+<li><strong>16 Mbit Flash Memory</strong> - <a href="https://www.macronix.com/en-us/products/NOR-Flash/Serial-NOR-Flash/Pages/default.aspx">MX25R1635</a> provides 16Mb SPI NOR Flash for FUOTA and data logging.</li>
+<li><strong>Secure Element</strong> - <a href="https://www.microchip.com/wwwproducts/en/ATECC608A-TNGLORA">ATECC608A-TNGLORA</a> is a pre-provisioned LoRaWAN secure element that is used to store root keys.</li>
+<li><strong>ULP 3-axis accelerometer</strong> - <a href="https://www.st.com/en/mems-and-sensors/lis2dh12.html">LIS2DH12</a> is an ultra-low-power high-performance three-axis linear accelerometer that measures the acceleration of motion or vibration.</li>
+</ul>
 
 </div>
 
