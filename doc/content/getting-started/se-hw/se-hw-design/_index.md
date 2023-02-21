@@ -10,8 +10,8 @@ This section helps you set up hardware design tools and explore the reference ha
 
 ## Prerequisites
 
-1. [KiCAD v.5.1.8](https://kicad.org/)
-2. [FreeCAD 0.18](https://www.freecadweb.org/)
+1. [KiCAD v6 (newer versions will work too)](https://kicad.org/)
+2. [FreeCAD](https://www.freecadweb.org/)
 
 ## Setup
 

@@ -5,17 +5,14 @@ weight: -2
 distributions: null
 ---
 
-{{% gnse %}} comes pre-programmed with a vanilla application that showcases the device functionality and capabilities.
+{{% gnse %}} comes pre-programmed with a vanilla application that showcases some of the device functionality and capabilities.
 
-The application leverages a combination of the on-board components such as LEDs, button, buzzer, accelerometer, secure element, temperature and humidity sensor.
+The application leverages a combination of the on-board components such as LEDs, button, secure element, temperature and humidity sensor.
 
 <!--more-->
 
 ## Claiming your device
-
-The vanilla application uses the on-board secure element to join the LoRaWAN network using over the air activation (OTAA) method.
-
-You can claim your device on the The Things Stack cloud by following this [guide](https://www.thethingsindustries.com/docs/devices/device-claiming/claim-devices/).
+Please see the [Quick Start guide]({{< ref "/getting-started/platform-guide" >}}) in order to claim your device before powering it up.
 
 ## Powering up your device
 

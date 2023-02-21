@@ -15,17 +15,11 @@ The javascript payload formatter below can be used to decode the vanilla app.
 ```javascript
 function decodeUplink(input) {
   var data = {};
-  if (input.fPort == 1)
-  {
-  data.BATTERY_VOLTAGE = (input.bytes[0]/10);
-  data.GNSE_FW_VERSION = input.bytes[1] + (input.bytes[2]/10);
-  }
+  data.batt_volt = (input.bytes[0]/10);
+  data.temperature = (((input.bytes[1] << 8) + input.bytes[2]) - 500)/10;
+  data.humidity = ((input.bytes[3] << 8) + input.bytes[4])/10;
+  data.button = input.bytes[5];
 
-  if (input.fPort == 2)
-  {
-  data.TEMPERATURE = ((input.bytes[0] << 8) + input.bytes[1])/10;
-  data.HUMIDITY = ((input.bytes[2] << 8) + input.bytes[3])/10;
-  }
   return {
     data: data,
   };
