@@ -14,7 +14,7 @@ To get started with the {{% gn %}} platform, you typically need two things:
 1. {{% gn %}} supported hardware
 2. {{% gn %}} supported software
 
-For example, if you are planning to use the {{% gnse %}}, you need:
+For example, if you are planning to use the {{% gnse %}}, you would need:
 
 1. {{% gnse %}} board
 2. {{% gnse %}} application
