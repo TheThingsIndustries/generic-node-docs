@@ -24,7 +24,7 @@ To be able to build the applications from the command-line, you need to install 
 
 ## Setup
 
-1. Clone the {{% gnse %}} GitHub project as mentioned [before](http://localhost:1313/getting-started/se-sw/) and checkout the `develop` branch:
+1. Clone the {{% gnse %}} GitHub project as mentioned [before](/getting-started/se-sw/) and checkout the `develop` branch:
 
 ```bash
 git checkout develop
