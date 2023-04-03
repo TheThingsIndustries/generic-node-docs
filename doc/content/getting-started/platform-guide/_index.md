@@ -12,17 +12,16 @@ The {{% gn %}} platform is designed to provide an easy way to get started with d
 <!--more-->
 
 
-## Step 1: Create a new account on The Things Stack (TTS) Cloud
+## Step 1: Create a new account on {{% tts %}} Cloud
 
-We have a dedicated The Things Stack Cloud tenant for the {{% gn %}}. Please head to this url and create a new account if you don't have one. 
-You may also sign in with your Things ID account: [Generic Node TTS Cloud](https://gnse.eu1.cloud.thethings.industries/). You're also free to use our community stack ([The Thigns Network](https://eu1.cloud.thethings.network/)) or any other TTS Cloud tenant for this purpose.
+We have a dedicated [{{% tts %}} Cloud tenant for the {{% gn %}}](https://gnse.eu1.cloud.thethings.industries/). To access it, you may create a new account or sign in with The Things ID. You're also free to use our [community network](https://eu1.cloud.thethings.network/) or any other {{% tts %}} Cloud tenant for this purpose.
 
 
-## Step 2: Select your region and create a new Application
 
-Create new Application with a unique app-id. Adding the app name and the description are optional.  
+## Step 2: Select your region and create your application
+
+Choose a network cluster for your region (EU in this example) and head over to the applications tab. Create new application with a unique **Application ID**. Application name and description are optional.  
 {{< figure src="gnse_claim_0.png" alt="Create new Application" >}}
-
 
 Once you have a test applicatin similar to this we can move to the next step:
 {{< figure src="gnse_claim_1.png" alt="Test application" >}}
@@ -45,14 +44,13 @@ Once the camera is in focus, console would be able to successfuly scan the QR co
 
 {{< figure src="gnse_claim_3.png" alt="QR code scanned" >}}
 
-{{% gnse %}} is already included in the [device repository](https://www.thethingsnetwork.org/device-repository/), so you just input the device brand, model, region profile and the frequency plan for your location (i.e. The Things Industries -> Generic Node (SE), EU_863_870, SF9 for RX2 - recommended ) and simply hit **Register end device**.
+{{% gnse %}} is already included in the [device repository](https://www.thethingsnetwork.org/device-repository/), so you just input the device brand, model, region profile and the frequency plan for your location (i.e. The Things Industries &#8594; Generic Node (SE), EU_863_870, SF9 for RX2 - recommended ) and simply hit **Register end device**.
 
 {{< figure src="gnse_claim_4.png" alt="Registering end device" >}}
 
 Congratulations! You have successfully registered your {{% gnse %}} device. You may proceed to ***Step 5***.
 
 {{< figure src="gnse_claim_7.png" alt="Device registered" >}}
-
 
 ## Step 5: Powering up your device
 
@@ -62,9 +60,9 @@ If the device powers up correctly, you will see the green LED briefly lighting u
 
 ## Step 6: Joining the network and seeing the first data packets
 
-The device will attempt to join LoRaWAN network using OTAA. Please make sure there's a TTN/TTS LoRaWAN Gateway coverage in your area. 
+The device will attempt to join LoRaWAN network using OTAA. Please make sure there's {{% tts %}} coverage in your area.  
 
-When the device joins successfully you will see some verbose activity and raw payload in the ***Live Data*** tab of the device console. If you are not able to understand the raw bytes, don't panic!, it's because we still need to modify the payload formatter. Please copy-paste the custom Javascript formatter code below to the ***Payload Formatters -> Uplink*** section of your application. 
+When the device successfully joins, you will see some verbose activity and raw payload in the **Live Data** tab in your device's overview page. If you are not able to understand the raw bytes, don't panic! It's because you still need to configure the payload formatter. Please copy-paste the following JavaScript formatter code below to the **Payload formatters &#8594; Uplink** section. You can configure a payload formatter on a device or on an application level. 
 
 {{< figure src="gnse_claim_8.png" alt="Payload Formatter" >}}
 
@@ -84,8 +82,8 @@ function decodeUplink(input) {
 ```
 
 If everything goes well you should see data packets in correctly formatted form. Well done!
-By default, the devices are configured to transmit every 10 minutes. You're free to change this by sending hexadecimal values in minutes as a downlink message to the device under ***Messaging -> Downlink*** on FPort 1. 
+By default, devices are configured to transmit every 10 minutes. You're free to change this by sending hexadecimal values in minutes as a downlink message to the device under **Messaging &#8594; Downlink** on FPort 1. 
 
 {{< figure src="gnse_claim_9.png" alt="Live Data" >}}
 
-Please see the [Sensor Edition: vanilla application]({{< ref "/applications/se-vanilla" >}}) page to learn more about the uplink, downlinks and the overall firmware behaviour. If you have any questions of feedback please do not hesitate to post it in our [forum](https://www.thethingsnetwork.org/forum/c/nodes/generic-node/88) or drop us a message on our social media channels [@generic_node](https://twitter.com/generic_node/).
+Please see the [Sensor Edition: vanilla application]({{< ref "/applications/se-vanilla" >}}) page to learn more about the uplink, downlinks and the overall firmware behaviour. If you have any questions or feedback please do not hesitate to post it in our [forum](https://www.thethingsnetwork.org/forum/c/nodes/generic-node/88) or drop us a message on our social media channels [@generic_node](https://twitter.com/generic_node/).
