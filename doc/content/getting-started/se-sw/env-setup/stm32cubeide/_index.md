@@ -18,7 +18,7 @@ This section helps you set up the environment and build an application using ST 
 
 ## Setup
 
-1. Clone the {{% gnse %}} GitHub project as mentioned [before](/getting-started/se-sw/) and checkout the `develop` branch:
+1. Clone the {{% gnse %}} GitHub project as mentioned [before]({{< ref "/getting-started/se-sw" >}}) and checkout the `develop` branch:
 
 ```bash
 git checkout develop
