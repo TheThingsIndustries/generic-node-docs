@@ -11,20 +11,7 @@ The application leverages a combination of the on-board components such as LEDs,
 
 <!--more-->
 
-## Claiming your device
-Please see the [Quick Start guide]({{< ref "/getting-started/platform-guide" >}}) in order to claim your device before powering it up.
-
-## Powering up your device
-
-After claiming, you can power up the device using two standard AA batteries.
-
-If the device powers up correctly, you will see the red, green and blue LEDs blinking thus indicating successful boot-up.
-
-## Joining the network
-
-The device will attempt to join LoRaWAN network using OTAA indicated by the blinking red led.
-
-When the device joins successfully, the buzzer will ring briefly the red LED will stop blinking.
+Check out the [Quick Start guide]({{< ref "/getting-started/platform-guide" >}}) and learn how to claim your device, power it up and register it on {{% tts %}} network.
 
 ## Default uplinks and events
 
