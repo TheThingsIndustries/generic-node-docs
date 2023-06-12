@@ -5,15 +5,11 @@ weight:
 distributions: null
 ---
 
-If you don't have an ST-LINK V3 probe for programming the Generic Node Sensor Edition, you can program it through a **USB-to-UART TTL converter** (sometimes referred to as a serial converter). They are commonly available as breakout boards, such as the [SparkFun FTDI Basic Breakout - 3.3V](https://www.sparkfun.com/products/9873), for example.
+If you don't have an ST-LINK V3 probe for programming the Generic Node Sensor Edition (GNSE), you can program it through a **USB-to-UART TTL converter** (sometimes referred to as a serial converter). They are commonly available as breakout boards, such as the [SparkFun FTDI Basic Breakout - 3.3V](https://www.sparkfun.com/products/9873), for example.
 
-{{< note "Make sure to use an USB-to-UART  converter  board configured to 3.3v for both power output and I/O levels. If you have a 5V FTDI breakout board, check if it has a jumper that allows you to switch it to 3.3v." />}}
+{{< note "Make sure to use a USB-to-UART converter board configured to 3.3V for both power output and I/O levels. If you have a 5V FTDI breakout board, check if it has a jumper that allows you to switch it to 3.3V." />}}
 
-Install drivers on your computer if they are not already installed. Follow the tutorials on the **SparkFun** website to learn how to install them on different operating systems:
-
-- Windows: https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/windows---in-depth
-- Mac: https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/mac
-- Linux: https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/linux
+Install drivers on your computer if they are not already installed. Follow the tutorials on the SparkFun website to learn how to install them on [Windows](https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/windows---in-depth), [Mac](https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/mac) or [Linux](https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/linux).
 
 Connect GNSE with the FTDI breakout using jumper wires as shown below:
 
@@ -30,7 +26,7 @@ Please refer to the table below for clarity:
 
 Connect FTDI to the computer using miniUSB cable.
 
-Now, you need the `.bin` file of your project to flash onto the GNSE using [STM32CubeProgrammer]({{< ref "/getting-started/programming-software/st-examples/stcubeprog" >}}). This file can be generated during the build process with the [STM32CubeIDE]({{< ref "/getting-started/programming-software/st-examples/stcubeide" >}}). To configure the generation of a `.bin` file, right-click on the **project** and select **Properties** from the shortcut menu.
+Now, you need to flash the `.bin` file of your project onto the GNSE using [STM32CubeProgrammer]({{< ref "/getting-started/programming-software/st-examples/stcubeprog" >}}). This file can be generated during the build process with the [STM32CubeIDE]({{< ref "/getting-started/programming-software/st-examples/stcubeide" >}}). To configure the generation of a `.bin` file, right-click on the **Project** and select **Properties** from the shortcut menu.
 
 In the **Properties** window, expand **C/C++ Build** and then select **Settings**. In the **Tool Settings** tab, select **MCU Post build outputs** and then choose **Convert to binary file (-O binary)**. Then, click on the **Apply and Close** button.
 
