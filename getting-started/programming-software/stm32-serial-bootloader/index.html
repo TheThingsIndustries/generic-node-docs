@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="has-navbar-fixed-top">
+
+<head>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11557232-16"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-11557232-16');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="generator" content="Hugo 0.70.0" />
+  <title>STM32&#39;s Serial Bootloader | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/getting-started/programming-software/stm32-serial-bootloader/" />
+  <link rel="alternate icon" href="/docs/favicon.ico">
+  <link rel="alternate icon" type="image/png" href="/docs/favicon.png">
+  <link rel="icon" type="image/png" href="/docs/favicon.png">
+  <link rel="stylesheet" href="https://www.genericnode.com/docs/css/theme.min.3f836fedc9c6a2b86da58d8c83e93a00336ad147490c56a3e1c424807e9787c1.css" integrity="sha256-P4Nv7cnGorhtpY2Mg&#43;k6ADNq0UdJDFaj4cQkgH6Xh8E=" crossorigin="anonymous">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta itemprop="name" content="STM32&#39;s Serial Bootloader">
+  <meta itemprop="description" content="">
+  <meta itemprop="keywords" content="">
+  <meta property="og:title" content="STM32&#39;s Serial Bootloader">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://www.genericnode.com/docs/getting-started/programming-software/stm32-serial-bootloader/">
+  <meta name="twitter:title" content="STM32&#39;s Serial Bootloader" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:card" content="summary" />
+</head>
+
+
+<body>
+
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs/">
+        <img class="logo" src="/docs/img/GN-logo.svg">
+        <p class="navbar-item is-size-7"></p>
+      </a>
+      <span class="navbar-burger burger" data-target="topMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="topMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/docs/getting-started/">Getting Started</a>
+        <a class="navbar-item" href="/docs/applications/">Applications</a>
+        <a class="navbar-item" href="/docs/sensor-edition/">Sensor Edition</a>
+        <a class="navbar-item" href="/docs/tracker-edition/">Tracker Edition</a>
+      </div>
+      <div class="navbar-end">
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      
+      <div class="column is-one-third">
+
+
+<h2 class="title is-size-4">Programming Software</h2>
+
+<ul class="menu-list">
+<a href="https://www.genericnode.com/docs/getting-started/programming-software/" class="">Overview</a>
+<li>
+  <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/" class="">ST-LINK Programming Methods</a>
+  <ul class="menu-list">
+    <li>
+      <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/" class="">STM32CubeProgrammer</a>
+    </li>
+    <li>
+      <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/" class="">STM32CubeIDE</a>
+    </li>
+    <li>
+      <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/openocd/" class="">OpenOCD</a>
+    </li>
+    <li>
+      <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/mounting/" class="">USB Mounting (Drag-and-Drop)</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://www.genericnode.com/docs/getting-started/programming-software/stm32-serial-bootloader/" class="is-active">STM32&#39;s Serial Bootloader</a>
+</li>
+</ul>
+
+
+
+
+
+      </div>
+      
+      <div class="column is-two-thirds">
+
+<h1 class="title is-size-2">STM32&#39;s Serial Bootloader
+
+
+</h1>
+
+<div class="content">
+
+
+<p>If you don&rsquo;t have an ST-LINK V3 probe for programming the Generic Node Sensor Edition (GNSE), you can program it through a <strong>USB-to-UART TTL converter</strong> (sometimes referred to as a serial converter). They are commonly available as breakout boards, such as the <a href="https://www.sparkfun.com/products/9873">SparkFun FTDI Basic Breakout - 3.3V</a>, for example.</p>
+<div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  Make sure to use a USB-to-UART converter board configured to 3.3V for both power output and I/O levels. If you have a 5V FTDI breakout board, check if it has a jumper that allows you to switch it to 3.3V.
+</div>
+<p>Install drivers on your computer if they are not already installed. Follow the tutorials on the SparkFun website to learn how to install them on <a href="https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/windows---in-depth">Windows</a>, <a href="https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/mac">Mac</a> or <a href="https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/linux">Linux</a>.</p>
+<p>Connect GNSE with the FTDI breakout using jumper wires as shown below:</p>
+<figure>
+    <img src="gnse-ftdi.png"/> 
+</figure>
+
+<p>Please refer to the table below for clarity:</p>
+<table>
+<thead>
+<tr>
+<th>GNSE</th>
+<th>FTDI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TXD</td>
+<td>RXI</td>
+</tr>
+<tr>
+<td>RXD</td>
+<td>TXO</td>
+</tr>
+<tr>
+<td>VCC</td>
+<td>3V3</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<p>Connect FTDI to the computer using miniUSB cable.</p>
+<p>Now, you need to flash the <code>.bin</code> file of your project onto the GNSE using <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeprog/">STM32CubeProgrammer</a>. This file can be generated during the build process with the <a href="https://www.genericnode.com/docs/getting-started/programming-software/st-examples/stcubeide/">STM32CubeIDE</a>. To configure the generation of a <code>.bin</code> file, right-click on the <strong>Project</strong> and select <strong>Properties</strong> from the shortcut menu.</p>
+<p>In the <strong>Properties</strong> window, expand <strong>C/C++ Build</strong> and then select <strong>Settings</strong>. In the <strong>Tool Settings</strong> tab, select <strong>MCU Post build outputs</strong> and then choose <strong>Convert to binary file (-O binary)</strong>. Then, click on the <strong>Apply and Close</strong> button.</p>
+<figure>
+    <img src="stcubeide-build-properties.png"/> 
+</figure>
+
+<p>Now, you can build the project by right-clicking on it and selecting <strong>Build Project</strong> from the shortcut menu. Once the build is complete, the <code>.bin</code> file can be found in the <code>Debug</code> folder.</p>
+<p>Short the <strong>BOOT0</strong> pins on the GNSE board using a <strong>shunt/jumper</strong>. This allows programming GNSE through UART1 with the internal system bootloader of the STM32 MCU.</p>
+<figure>
+    <img src="boot0.png"/> 
+</figure>
+
+<p>Press and release the <strong>RESET</strong> button while shorting the <strong>BOOT0</strong>.</p>
+<p>GNSE will switch to the bootloader mode. Now unshort <strong>BOOT0</strong> by removing the <strong>shunt/jumper</strong> since it’s only being read at the startup.</p>
+<p>Start <strong>STM32CubeProgrammar</strong>.</p>
+<p>Select <strong>UART</strong> from the dropdown menu, and then choose the <strong>COM port</strong> associated with your GNSE.</p>
+<p>Click on the <strong>Connect</strong> button.</p>
+<figure>
+    <img src="uart-config.png"/> 
+</figure>
+
+<p>After connecting, the button text will change to <strong>Disconnect</strong>. Also, the data in the device memory will display in the <strong>Device memory</strong> tab.</p>
+<figure>
+    <img src="stcubeprog-connect.png"/> 
+</figure>
+
+<p>Click on the <strong>+</strong> tab and select <strong>Open file</strong> from the menu.</p>
+<figure>
+    <img src="stcubeprog-open-file.png"/> 
+</figure>
+
+<p>Browse and select the <code>.bin</code> file, <code>basic.bin</code> for example.</p>
+<figure>
+    <img src="browse-bin-file.png"/> 
+</figure>
+
+<p>Click on the <strong>Download</strong> button.</p>
+<figure>
+    <img src="stcubeprog-download.png"/> 
+</figure>
+
+<p>It will take some time to download/flash the file onto the GNSE.</p>
+<figure>
+    <img src="stcubeprog-download-progress.png"/> 
+</figure>
+
+<p>Once completed click on the <strong>OK</strong> button.</p>
+<figure>
+    <img src="stcubeprog-ok.png"/> 
+</figure>
+
+<p>Click on the <strong>Disconnect</strong> button.</p>
+<p>Now you can remove the USB-to-UART converter from your GNSE.</p>
+
+</div>
+
+
+
+
+
+
+<div class="is-clearfix">
+<a class="button is-pulled-left" href="/docs/getting-started/programming-software/st-examples/mounting/">← USB Mounting (Drag-and-Drop)</a>
+</div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer background-footer">
+  <div class="container">
+    <div class="columns">
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">The Things Stack</h3>
+        <p><a class="" href="/docs/getting-started/">Getting Started</a></p>
+        <p><a class="" href="/docs/applications/">Applications</a></p>
+        <p><a class="" href="/docs/sensor-edition/">Sensor Edition</a></p>
+        <p><a class="" href="/docs/tracker-edition/">Tracker Edition</a></p>
+      </nav>
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">Contributing</h3>
+        <p><a class="" href="https://github.com/TheThingsIndustries/generic-node-se">GitHub</a></p>
+        <p><a class="" href="https://www.thethingsnetwork.org/forum/c/nodes/generic-node">Forum</a></p>
+      </nav>
+      
+      <nav class="column is-one-quarter">
+        <h3 class="title is-6">About Us</h3>
+        <p><a class="" href="https://www.thethingsnetwork.org">The Things Network</a></p>
+        <p><a class="" href="https://www.thethingsindustries.com">The Things Industries</a></p>
+      </nav>
+      </div>
+  </div>
+</footer>
+<script src="https://www.genericnode.com/docs/js/vendor/basicLightbox.min.js"></script>
+<script src="https://www.genericnode.com/docs/js/theme.min.6705961acdc7b360c900fe309485c5994ae9a75c5507bc88dbd1507420c40ae7.js" integrity="sha256-ZwWWGs3Hs2DJAP4wlIXFmUrpp1xVB7yI29FQdCDECuc=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
