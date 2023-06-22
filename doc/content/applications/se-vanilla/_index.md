@@ -5,29 +5,13 @@ weight: -2
 distributions: null
 ---
 
-{{% gnse %}} comes pre-programmed with a vanilla application that showcases the device functionality and capabilities.
+{{% gnse %}} comes pre-programmed with a vanilla application that showcases some of the device functionality and capabilities.
 
-The application leverages a combination of the on-board components such as LEDs, button, buzzer, accelerometer, secure element, temperature and humidity sensor.
+The application leverages a combination of the on-board components such as LEDs, button, secure element, temperature and humidity sensor.
 
 <!--more-->
 
-## Claiming your device
-
-The vanilla application uses the on-board secure element to join the LoRaWAN network using over the air activation (OTAA) method.
-
-You can claim your device on the The Things Stack cloud by following this [guide](https://www.thethingsindustries.com/docs/devices/device-claiming/claim-devices/).
-
-## Powering up your device
-
-After claiming, you can power up the device using two standard AA batteries.
-
-If the device powers up correctly, you will see the red, green and blue LEDs blinking thus indicating successful boot-up.
-
-## Joining the network
-
-The device will attempt to join LoRaWAN network using OTAA indicated by the blinking red led.
-
-When the device joins successfully, the buzzer will ring briefly the red LED will stop blinking.
+Check out the [Quick Start guide]({{< ref "/getting-started/platform-guide" >}}) and learn how to claim your device, power it up and register it on {{% tts %}} network.
 
 ## Default uplinks and events
 
