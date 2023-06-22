@@ -95,25 +95,91 @@
 <div class="content">
 
 
-<p>The Generic Node platform is designed to provide an easy way to get started with device development.</p>
-<p>To get started with the Generic Node platform, you typically need two things:</p>
-<ol>
-<li>Generic Node supported hardware</li>
-<li>Generic Node supported software</li>
-</ol>
-<p>For example, if you are planning to use the Generic Node Sensor Edition, you would need:</p>
-<ol>
-<li>Generic Node Sensor Edition board</li>
-<li>Generic Node Sensor Edition application</li>
-</ol>
-<h2 id="get-a-device">Get a device</h2>
-<p>Generic Node Sensor Edition is currently in the production phase. Order one at <a href="https://www.genericnode.com/">genericnode.com</a>!</p>
-<h2 id="explore-your-nodes-features">Explore your node&rsquo;s features</h2>
-<p>To learn more about your node and set it up for use, follow the hardware and software setup guides contained in your node&rsquo;s corresponding section:</p>
+<p>The Generic Node platform is designed to provide an easy way to get started with device development. It comes pre-programmed with a demo app. Please follow this section to learn how to claim your Generic Node device and start using it right away.</p>
+<div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  Generic Node Sensor Edition is currently in the production phase. If you don&rsquo;t have one get yours at <a href="https://www.thethingsshop.com/products/generic-node-sensor-edition">thethingsshop.com</a>!
+</div>
+<h2 id="create-a-new-account-on-the-things-stack-cloud">Create a new account on The Things Stack Cloud</h2>
+<p>We have a dedicated <a href="https://gnse.eu1.cloud.thethings.industries/">The Things Stack Cloud tenant for the Generic Node</a>. To access it, you may create a new account or sign in with The Things ID. You&rsquo;re also free to use our <a href="https://eu1.cloud.thethings.network/">community network</a> or any other The Things Stack Cloud tenant for this purpose.</p>
+<h2 id="select-your-region-and-create-an-application">Select your region and create an application</h2>
+<p>Choose a network cluster for your region (EU in this example) and head over to the <strong>Applications</strong> tab. Create new application with a unique <strong>Application ID</strong>. <strong>Application name</strong> and <strong>Description</strong> are optional.</p>
+<figure>
+    <img src="gnse_claim_0.png"
+         alt="Create new Application"/> 
+</figure>
+
+<p>Once you have a test applicatin ready (like shown on the image below), you can proceed further to claim ownership over your device.</p>
+<figure>
+    <img src="gnse_claim_1.png"
+         alt="Test application"/> 
+</figure>
+
+<h2 id="claim-your-device-ownership">Claim your device ownership</h2>
+<p>Generic Node Sensor Edition comes factory pre-flashed with the <a href="https://www.genericnode.com/docs/applications/se-vanilla/">vanilla app</a> that uses the on-board secure element to join the LoRaWAN network using the <a href="https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/#otaa">OTAA</a>.</p>
+<p>In order to register your device and claim its ownership, you will have to provide information printed on the back of the device during its registration process.</p>
+<p>In your The Things Stack application, click on the <strong>Register end device</strong> button to create a new device. To add a new device, you have a few options:</p>
 <ul>
-<li><a href="https://www.genericnode.com/docs/sensor-edition/">Sensor Edition</a></li>
-<li><a href="https://www.genericnode.com/docs/tracker-edition/">Tracker Edition</a></li>
+<li><a href="https://www.thethingsindustries.com/docs/devices/adding-devices/#onboarding-devices-using-qr-codes">Using its QR code</a></li>
+<li><a href="https://www.thethingsindustries.com/docs/devices/adding-devices/#using-the-lorawan-device-repository">Using LoRaWAN Device Repository</a></li>
+<li><a href="https://www.thethingsindustries.com/docs/devices/adding-devices/#manually-registering-a-device">Manually</a></li>
 </ul>
+<figure>
+    <img src="gnse_claim_2.png"
+         alt="Registering new end device"/> 
+</figure>
+
+<p>Since every Generic Node Sensor Edition comes with a QR code, this method is the easiest one and hence used in this guide.</p>
+<h3 id="claim-the-device-using-its-qr-code">Claim the device using its QR code</h3>
+<p>If your computer has a webcam then this is the most straightforward option. Just click on the <strong>Scan end device QR code</strong> button (with camera icon), select your webcam input and scan the back of your device. You may also use a smartphone to accomplish this.</p>
+<p>Once the camera is in focus, the Console should be able to successfully scan the QR code and extract the required device credentials. Then, hit <strong>Apply</strong> to continue the registration process.</p>
+<figure>
+    <img src="gnse_claim_3.png"
+         alt="QR code scanned"/> 
+</figure>
+
+<p>Generic Node Sensor Edition is already included in the <a href="https://www.thethingsnetwork.org/device-repository/">LoRaWAN Device Repository</a>, so you just enter the device brand, model, region profile and the <a href="https://www.thethingsindustries.com/docs/reference/frequency-plans/">frequency plan</a> for your location (i.e. <code>The Things Industries</code> → <code>Generic Node (Sensor Edition)</code>, <code>EU_863_870 (SF9 for RX2 - recommended)</code> and simply hit <strong>Register end device</strong>.</p>
+<figure>
+    <img src="gnse_claim_4.png"
+         alt="Registering end device"/> 
+</figure>
+
+<p>Congratulations! You have successfully registered your Generic Node Sensor Edition device.</p>
+<figure>
+    <img src="gnse_claim_7.png"
+         alt="Device registered"/> 
+</figure>
+
+<h2 id="power-up-your-device">Power up your device</h2>
+<p>After claiming, you can power up the device using two standard AA batteries, or using a small 3.7V LiPo/Li-ion battery with a standard JST PH 2.0 connector.</p>
+<p>If the device powers up correctly, you will see the green LED briefly lighting up indicating a successful boot-up. Pressing the front user button also triggers a sensor sampling followed by an uplink.</p>
+<h2 id="join-the-network">Join the network</h2>
+<p>The device will automatically attempt to join LoRaWAN network using OTAA. Please make sure there&rsquo;s <a href="https://ttnmapper.org/heatmap/">The Things Stack coverage</a> in your area.</p>
+<p>When the device successfully joins, you will see some verbose activity and raw payload in the <strong>Live Data</strong> tab in your device&rsquo;s overview page. If you are not able to understand the raw bytes, don&rsquo;t panic! It&rsquo;s because you still need to configure the payload formatter. Please copy-paste the following JavaScript formatter code below to the <strong>Payload formatters → Uplink</strong> section. You can configure a payload formatter on a device or on an application level.</p>
+<figure>
+    <img src="gnse_claim_8.png"
+         alt="Payload Formatter"/> 
+</figure>
+
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">decodeUplink</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">batt_volt</span> <span class="o">=</span> <span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">=</span> <span class="p">(((</span><span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">-</span> <span class="mi">500</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">humidity</span> <span class="o">=</span> <span class="p">((</span><span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">button</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">bytes</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div><p>If everything goes well you should see incoming data packets formatted to a nicely readable form. Well done!</p>
+<p>By default, devices are configured to transmit every 10 minutes. You&rsquo;re free to change this by sending hexadecimal values in minutes as a downlink message to the device under <strong>Messaging → Downlink</strong> on FPort 1.</p>
+<figure>
+    <img src="gnse_claim_9.png"
+         alt="Live Data"/> 
+</figure>
+
+<p>Please check out the <a href="https://www.genericnode.com/docs/applications/se-vanilla/">Sensor Edition: vanilla application</a> page to learn more about the uplink, downlinks and the overall firmware behaviour. If you have any questions or feedback please do not hesitate to post it in <a href="https://www.thethingsnetwork.org/forum/c/nodes/generic-node/88">The Things Network forum</a> or drop us a message on our Twitter channel <a href="https://twitter.com/generic_node/">@generic_node</a>.</p>
 </div>
 
 
