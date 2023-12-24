@@ -17,20 +17,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="generator" content="Hugo 0.70.0" />
-  <title>Sensor Edition Tutorials | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/" />
+  <title>Powering GNSE Using Voltaic Solar Charger | Generic Node</title><link rel="canonical" href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/using-solar-power/" />
   <link rel="alternate icon" href="/docs/favicon.ico">
   <link rel="alternate icon" type="image/png" href="/docs/favicon.png">
   <link rel="icon" type="image/png" href="/docs/favicon.png">
   <link rel="stylesheet" href="https://www.genericnode.com/docs/css/theme.min.3f836fedc9c6a2b86da58d8c83e93a00336ad147490c56a3e1c424807e9787c1.css" integrity="sha256-P4Nv7cnGorhtpY2Mg&#43;k6ADNq0UdJDFaj4cQkgH6Xh8E=" crossorigin="anonymous">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta itemprop="name" content="Sensor Edition Tutorials">
+  <meta itemprop="name" content="Powering GNSE Using Voltaic Solar Charger">
   <meta itemprop="description" content="">
   <meta itemprop="keywords" content="">
-  <meta property="og:title" content="Sensor Edition Tutorials">
+  <meta property="og:title" content="Powering GNSE Using Voltaic Solar Charger">
   <meta property="og:description" content="">
-  <meta property="og:url" content="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/">
-  <meta name="twitter:title" content="Sensor Edition Tutorials" />
+  <meta property="og:url" content="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/using-solar-power/">
+  <meta name="twitter:title" content="Powering GNSE Using Voltaic Solar Charger" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary" />
 </head>
@@ -76,12 +76,12 @@
 <h2 class="title is-size-4">Sensor Edition Tutorials</h2>
 
 <ul class="menu-list">
-<a href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/" class="is-active">Overview</a>
+<a href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/" class="">Overview</a>
 <li>
   <a href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/porting-stm32cubewl-fwlib/" class="">Porting STM32CubeWL Firmware Library</a>
 </li>
 <li>
-  <a href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/using-solar-power/" class="">Powering GNSE Using Voltaic Solar Charger</a>
+  <a href="https://www.genericnode.com/docs/getting-started/se-hands-on-guide/using-solar-power/" class="is-active">Powering GNSE Using Voltaic Solar Charger</a>
 </li>
 </ul>
 
@@ -93,7 +93,7 @@
       
       <div class="column is-two-thirds">
 
-<h1 class="title is-size-2">Sensor Edition Tutorials
+<h1 class="title is-size-2">Powering GNSE Using Voltaic Solar Charger
 
 
 </h1>
@@ -101,37 +101,49 @@
 <div class="content">
 
 
-<p>This guide contains hands-on videos and tutorials for working with Generic Node Sensor Edition.</p>
-<h2 id="introduction-to-generic-node-sensor-edition">Introduction to Generic Node Sensor Edition</h2>
-<p>The video below shows the official announcement of Generic Node Sensor Edition at The Things Conference 2021.</p>
-<p>It provides an overview of the device features and possible use cases.</p>
+<p>This tutorial will show you how to power the Generic Node Sensor Edition using the <a href="https://voltaicsystems.com/LIC-solar-charger/">Voltaic Lithium-Ion Capacitor Solar Charger</a>, which includes a 250F Lithium-Ion Capacitor for power storage and a Linear regulator (C116). The solar charger outputs an unregulated 2.5V - 3.8V, which is sufficient for powering the Generic Node Sensor Edition as it accepts a range of input voltages from 2.2V to 5.5V.</p>
+<figure>
+    <img src="voltaic-licap-solar-charger.jpg"
+         alt="Voltaic Li-Ion Capacitor Solar Charger"/> 
+</figure>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/3ifZX8lO5Mg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<p>Additionally, you will need a <a href="https://voltaicsystems.com/0-3-watt-6-volt-solar-panel-etfe/">0.3W 6V Mini Solar Panel - ETFE</a> to work with the solar charger.</p>
+<figure>
+    <img src="mini-solar-panel.jpg"
+         alt="Mini Solar Panel"/> 
+</figure>
+
+<p>Take a 2-pin JST (female) cable. Solder its wires to the Voltaic mini solar panel, ensuring that the negative and positive wires are correctly attached to the corresponding pads.</p>
+<figure>
+    <img src="soldering-solar-panel.jpg"
+         alt="Soldering Solar Panel"/> 
+</figure>
+
+<p>Connect the female JST connector of the mini solar panel to the male JST connector marked as &lsquo;IN&rsquo; on the solar charger.</p>
+<figure>
+    <img src="solar-charger-in.png"
+         alt="Solar Charger IN"/> 
+</figure>
+
+<div class="notification is-info is-light has-text-dark">
+  <h5 class="title is-family-sans-serif has-text-dark mb-1">Note:</h5>
+  Using a multimeter, check the voltage at the JST connector on the solar charger marked as &lsquo;OUT&rsquo;. If the output voltage is below 2.5V, leave the mini solar panel under sunlight for some time to charge the supercapacitor.
 </div>
+<p>Take another cable with female JST 2-pin connectors at both ends. Connect one end to the universal power input JST connector marked as &lsquo;BATTERY&rsquo; on the Generic Node Sensor Edition and the other end to the JST connector marked as &lsquo;OUT&rsquo; on the Voltaic Lithium-Ion Capacitor Solar Charger.</p>
+<figure>
+    <img src="solar-charger-gnse.png"
+         alt="Solar Charger GNSE"/> 
+</figure>
 
-<h2 id="getting-started-with-generic-node-sensor-edition">Getting started with Generic Node Sensor Edition</h2>
-<p>The video below provides a beginner-friendly getting started with the Generic Node Sensor Edition.</p>
+<p>The Generic Node Sensor Edition will be powered by the solar power stored in the supercapacitor.</p>
+<figure>
+    <img src="gnse-on.png"
+         alt="GNSE ON"/> 
+</figure>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/aHVi-FglC4Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<p>Program your Generic Node Sensor Edition with one of our <a href="https://www.genericnode.com/docs/applications/">sample applications</a>, and then connect it to <a href="https://www.genericnode.com/docs/getting-started/platform-guide/">The Things Stack</a>.</p>
+<p>Verify that the messages sent from the Generic Node Sensor Edition are received on The Things Stack side.</p>
 
-<h2 id="deep-dive-into-generic-node-sensor-edition-hardware">Deep dive into Generic Node Sensor Edition hardware</h2>
-<p>The video below provides a deep dive of the Generic Node Sensor Edition hardware features.</p>
-<p>It covers multiple topics such as device power consumption, battery analysis and device design decisions.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Fxv1l75Ge1c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<h2 id="deep-dive-into-generic-node-sensor-edition-software">Deep dive into Generic Node Sensor Edition software</h2>
-<p>The video below provides a deep dive of the Generic Node Sensor Edition software features.</p>
-<p>It covers multiple topics such as secure element QR code claiming, adding external sensors and boot-loader development.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/orhg0_kancg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
 </div>
 
 
@@ -140,7 +152,7 @@
 
 
 <div class="is-clearfix">
-<a class="button is-pulled-right" href="/docs/getting-started/se-hands-on-guide/porting-stm32cubewl-fwlib/">Porting STM32CubeWL Firmware Library →</a>
+<a class="button is-pulled-left" href="/docs/getting-started/se-hands-on-guide/porting-stm32cubewl-fwlib/">← Porting STM32CubeWL Firmware Library</a>
 </div>
 
 
